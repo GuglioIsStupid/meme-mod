@@ -22,5 +22,5 @@ function love.conf(t)
 	t.version = "11.3"
 	--t.console = true
 
-	t.window.title = "Friday Night Funkin' Rewritten Meme Mod AM7999#8935: BETA TESTER haha funny look at me im a really long window title so funny im taking up the entire window bar thing up here i dont know what its called but whatever it is im taking up all of it haha im so funny by typing out a really long and annoying thing nobody will ever read this probably wont even be visible because this is probably already way past the end of the title bar thing so uhh i guess im done typing ok bye"
+	t.window.title = "Friday Night Funkin' Rewritten Meme Mod | AM7999#8935: BETA TESTER | haha funny look at me im a really long window title so funny im taking up the entire window bar thing up here i dont know what its called but whatever it is im taking up all of it haha im so funny by typing out a really long and annoying thing nobody will ever read this probably wont even be visible because this is probably already way past the end of the title bar thing so uhh i guess im done typing ok bye"
 end
