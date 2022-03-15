@@ -812,37 +812,6 @@ return {
 				love.graphics.pop()
 			end
 
-			if settings.downscroll then
-				graphics.setColor(1, 0, 0)
-				love.graphics.rectangle("fill", -500, -400, 1000, 25)
-				graphics.setColor(0, 1, 0)
-				love.graphics.rectangle("fill", 500, -400, -health * 10, 25)
-				graphics.setColor(0, 0, 0)
-				love.graphics.setLineWidth(10)
-				love.graphics.rectangle("line", -500, -400, 1000, 25)
-				love.graphics.setLineWidth(1)
-				graphics.setColor(1, 1, 1)
-			else
-				graphics.setColor(1, 0, 0)
-				love.graphics.rectangle("fill", -500, 350, 1000, 25)
-				graphics.setColor(0, 1, 0)
-				love.graphics.rectangle("fill", 500, 350, -health * 10, 25)
-				graphics.setColor(0, 0, 0)
-				love.graphics.setLineWidth(10)
-				love.graphics.rectangle("line", -500, 350, 1000, 25)
-				love.graphics.setLineWidth(1)
-				graphics.setColor(1, 1, 1)
-			end
-
-			boyfriendIcon:draw()
-			enemyIcon:draw()
-
-			if settings.downscroll then
-				love.graphics.print("Score: " .. score, 300, -350)
-			else
-				love.graphics.print("Score: " .. score, 300, 400)
-			end
-
 			graphics.setColor(1, 1, 1, countdownFade[1])
 			countdown:draw()
 			graphics.setColor(1, 1, 1)
