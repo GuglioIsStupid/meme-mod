@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 return graphics.newSprite(
 	love.graphics.newImage(graphics.imagePath("small/boyfriend")),
-	-- Automatically generated from bfPixel.xml
+	-- Made by fucking me (Guglio)
 	{
 		{x = 0, y = 0, width = 2, height = 3, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 1: BF IDLE 1
         {x = 3, y = 0, width = 2, height = 3, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 2: BF IDLE 2
@@ -33,15 +33,15 @@ return graphics.newSprite(
         {x = 10, y = 4, width = 2, height = 3, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0} -- 10: BF RIGHT MISS
 	},
 	{
-		["miss down"] = {start = 8, stop = 8, speed = 24, offsetX = -1, offsetY = 0},
-		["down"] = {start = 4, stop = 4, speed = 24, offsetX = -1, offsetY = 0},
+		["miss down"] = {start = 8, stop = 8, speed = 24, offsetX = 0, offsetY = 0},
+		["down"] = {start = 4, stop = 4, speed = 24, offsetX = 0, offsetY = 0},
 		["idle"] = {start = 1, stop = 2, speed = 12, offsetX = 0, offsetY = 0},
 		["miss left"] = {start = 7, stop = 7, speed = 24, offsetX = 1, offsetY = 0},
 		["left"] = {start = 3, stop = 3, speed = 24, offsetX = 1, offsetY = 0},
-		["miss right"] = {start = 10, stop = 10, speed = 24, offsetX = 0, offsetY = 0},
-		["right"] = {start = 6, stop = 6, speed = 24, offsetX = 0, offsetY = 0},
-		["miss up"] = {start = 9, stop = 9, speed = 24, offsetX = -1, offsetY = 0},
-		["up"] = {start = 5, stop = 5, speed = 24, offsetX = -1, offsetY = 0}
+		["miss right"] = {start = 10, stop = 10, speed = 24, offsetX = -1, offsetY = 0},
+		["right"] = {start = 6, stop = 6, speed = 24, offsetX = -1, offsetY = 0},
+		["miss up"] = {start = 9, stop = 9, speed = 24, offsetX = 0, offsetY = 0},
+		["up"] = {start = 5, stop = 5, speed = 24, offsetX = 0, offsetY = 0}
 	},
 	"idle",
 	false
