@@ -218,6 +218,8 @@ return {
 									enemyNotes[id][c].x = x
 									enemyNotes[id][c].y = 3 - (noteTime + k) * 0.12 * speed
 
+									enemyNotes[id][c].offsetY = -3
+
 									enemyNotes[id][c]:animate("hold", false)
 								end
 
@@ -247,6 +249,8 @@ return {
 									table.insert(boyfriendNotes[id], sprite())
 									boyfriendNotes[id][c].x = x
 									boyfriendNotes[id][c].y = 3 - (noteTime + k) * 0.12 * speed
+
+									boyfriendNotes[id][c].offsetY = -3
 
 									boyfriendNotes[id][c]:animate("hold", false)
 								end
@@ -280,6 +284,8 @@ return {
 									boyfriendNotes[id][c].x = x
 									boyfriendNotes[id][c].y = 3 - (noteTime + k) * 0.12 * speed
 
+									boyfriendNotes[id][c].offsetY = -3
+
 									boyfriendNotes[id][c]:animate("hold", false)
 								end
 
@@ -309,6 +315,8 @@ return {
 									table.insert(enemyNotes[id], sprite())
 									enemyNotes[id][c].x = x
 									enemyNotes[id][c].y = 3 - (noteTime + k) * 0.12 * speed
+
+									enemyNotes[id][c].offsetY = -3
 
 									enemyNotes[id][c]:animate("hold", false)
 								end
@@ -344,6 +352,8 @@ return {
 									enemyNotes[id][c].x = x
 									enemyNotes[id][c].y = -3 + (noteTime + k) * 0.12 * speed
 
+									enemyNotes[id][c].offsetY = -3
+
 									enemyNotes[id][c]:animate("hold", false)
 								end
 
@@ -371,6 +381,8 @@ return {
 									table.insert(boyfriendNotes[id], sprite())
 									boyfriendNotes[id][c].x = x
 									boyfriendNotes[id][c].y = -3 + (noteTime + k) * 0.12 * speed
+
+									boyfriendNotes[id][c].offsetY = -3
 
 									boyfriendNotes[id][c]:animate("hold", false)
 								end
@@ -402,6 +414,8 @@ return {
 									boyfriendNotes[id][c].x = x
 									boyfriendNotes[id][c].y = -3 + (noteTime + k) * 0.12 * speed
 
+									boyfriendNotes[id][c].offsetY = -3
+
 									boyfriendNotes[id][c]:animate("hold", false)
 								end
 
@@ -429,6 +443,8 @@ return {
 									table.insert(enemyNotes[id], sprite())
 									enemyNotes[id][c].x = x
 									enemyNotes[id][c].y = -3 + (noteTime + k) * 0.12 * speed
+
+									enemyNotes[id][c].offsetY = -3
 
 									enemyNotes[id][c]:animate("hold", false)
 								end
@@ -642,7 +658,7 @@ return {
 			end
 
 			if #enemyNote > 0 then
-				if (not settings.downscroll and enemyNote[1].y - musicPos <= -3) or (settings.downscroll and enemyNote[1].y - musicPos >= 3) then
+				if (not settings.downscroll and enemyNote[1].y - musicPos <= -3) or (settings.downscroll and enemyNote[1].y - musicPos >= 136) then
 					voices:setVolume(1)
 
 					enemyArrow:animate("confirm", false)
@@ -658,7 +674,7 @@ return {
 			end
 
 			if #boyfriendNote > 0 then
-				if (not settings.downscroll and boyfriendNote[1].y - musicPos < -8) or (settings.downscroll and boyfriendNote[1].y - musicPos > 8) then
+				if (not settings.downscroll and boyfriendNote[1].y - musicPos < -3) or (settings.downscroll and boyfriendNote[1].y - musicPos > 3) then
 					if inst then voices:setVolume(0) end
 
 					notMissed[noteNum] = false
@@ -681,7 +697,7 @@ return {
 				if #boyfriendNote > 0 then
 					for i = 1, #boyfriendNote do
 						if boyfriendNote[i] and boyfriendNote[i]:getAnimName() == "on" then
-							if (not settings.downscroll and boyfriendNote[i].y - musicPos <= -9) or (settings.downscroll and boyfriendNote[i].y - musicPos >= 9) then
+							if (not settings.downscroll and boyfriendNote[i].y - musicPos <= -1.5) or (settings.downscroll and boyfriendNote[i].y - musicPos >= 1.5) then
 								local notePos
 								local ratingAnim
 
@@ -695,13 +711,13 @@ return {
 
 								voices:setVolume(1)
 
-								if notePos <= 4 then -- "Sick"
+								if notePos <= 1 then -- "Sick"
 									score = score + 350
 									ratingAnim = "sick"
-								elseif notePos <= 6 then -- "Good"
+								elseif notePos <= 3 then -- "Good"
 									score = score + 200
 									ratingAnim = "good"
-								elseif notePos <= 8 then -- "Bad"
+								elseif notePos <= 5 then -- "Bad"
 									score = score + 100
 									ratingAnim = "bad"
 								else -- "Shit"
