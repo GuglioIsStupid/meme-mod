@@ -27,11 +27,11 @@ lovefile:
 	@rm -rf build/lovefile
 	@mkdir -p build/lovefile
 
-	@cd src/love; zip -r -9 ../../build/lovefile/funkin-rewritten.love .
+	@cd src/love; zip -r -9 ../../build/lovefile/funkin-meme.love .
 
 	@mkdir -p build/release
-	@rm -f build/release/funkin-rewritten-lovefile.zip
-	@cd build/lovefile; zip -9 -r ../release/funkin-rewritten-lovefile.zip .
+	@rm -f build/release/funkin-meme-lovefile.zip
+	@cd build/lovefile; zip -9 -r ../release/funkin-meme-lovefile.zip .
 
 win64: lovefile
 	@rm -rf build/win64
@@ -46,11 +46,11 @@ win64: lovefile
 	@cp resources/win64/love/msvcp120.dll build/win64
 	@cp resources/win64/love/msvcr120.dll build/win64
 
-	@cat resources/win64/love/love.exe build/lovefile/funkin-rewritten.love > build/win64/funkin-rewritten.exe
+	@cat resources/win64/love/love.exe build/lovefile/funkin-meme.love > build/win64/funkin-meme.exe
 
 	@mkdir -p build/release
-	@rm -f build/release/funkin-rewritten-win64.zip
-	@cd build/win64; zip -9 -r ../release/funkin-rewritten-win64.zip .
+	@rm -f build/release/funkin-meme-win64.zip
+	@cd build/win64; zip -9 -r ../release/funkin-meme-win64.zip .
 
 win32: lovefile
 	@rm -rf build/win32
@@ -65,41 +65,41 @@ win32: lovefile
 	@cp resources/win32/love/msvcp120.dll build/win32
 	@cp resources/win32/love/msvcr120.dll build/win32
 
-	@cat resources/win32/love/love.exe build/lovefile/funkin-rewritten.love > build/win32/funkin-rewritten.exe
+	@cat resources/win32/love/love.exe build/lovefile/funkin-meme.love > build/win32/funkin-meme.exe
 
 	@mkdir -p build/release
-	@rm -f build/release/funkin-rewritten-win32.zip
-	@cd build/win32; zip -9 -r ../release/funkin-rewritten-win32.zip .
+	@rm -f build/release/funkin-meme-win32.zip
+	@cd build/win32; zip -9 -r ../release/funkin-meme-win32.zip .
 
 macos: lovefile
 	@rm -rf build/macos
-	@mkdir -p "build/macos/Friday Night Funkin' Rewritten.app"
+	@mkdir -p "build/macos/Friday Night Funkin' meme.app"
 
-	@cp -r resources/macos/love.app/. "build/macos/Friday Night Funkin' Rewritten.app"
+	@cp -r resources/macos/love.app/. "build/macos/Friday Night Funkin' meme.app"
 
-	@cp build/lovefile/funkin-rewritten.love "build/macos/Friday Night Funkin' Rewritten.app/Contents/Resources"
+	@cp build/lovefile/funkin-meme.love "build/macos/Friday Night Funkin' meme.app/Contents/Resources"
 
 	@mkdir -p build/release
-	@rm -f build/release/funkin-rewritten-macos.zip
-	@cd build/macos; zip -9 -r ../release/funkin-rewritten-macos.zip .
+	@rm -f build/release/funkin-meme-macos.zip
+	@cd build/macos; zip -9 -r ../release/funkin-meme-macos.zip .
 
 switch: lovefile
 	@rm -rf build/switch
-	@mkdir -p build/switch/switch/funkin-rewritten
+	@mkdir -p build/switch/switch/funkin-meme
 
-	@nacptool --create "Friday Night Funkin' Rewritten" HTV04 "$(shell cat version.txt)" build/switch/funkin-rewritten.nacp
+	@nacptool --create "Friday Night Funkin' meme" "Who even knows anymore" "$(shell cat version.txt)" build/switch/funkin-meme.nacp
 
 	@mkdir build/switch/romfs
-	@cp build/lovefile/funkin-rewritten.love build/switch/romfs/game.love
+	@cp build/lovefile/funkin-meme.love build/switch/romfs/game.love
 
-	@elf2nro resources/switch/love.elf build/switch/switch/funkin-rewritten/funkin-rewritten.nro --icon=resources/switch/icon.jpg --nacp=build/switch/funkin-rewritten.nacp --romfsdir=build/switch/romfs
+	@elf2nro resources/switch/love.elf build/switch/switch/funkin-meme/funkin-meme.nro --icon=resources/switch/icon.jpg --nacp=build/switch/funkin-meme.nacp --romfsdir=build/switch/romfs
 
 	@rm -r build/switch/romfs
-	@rm build/switch/funkin-rewritten.nacp
+	@rm build/switch/funkin-meme.nacp
 
 	@mkdir -p build/release
-	@rm -f build/release/funkin-rewritten-switch.zip
-	@cd build/switch; zip -9 -r ../release/funkin-rewritten-switch.zip .
+	@rm -f build/release/funkin-meme-switch.zip
+	@cd build/switch; zip -9 -r ../release/funkin-meme-switch.zip .
 
 clean:
 	@rm -rf build
