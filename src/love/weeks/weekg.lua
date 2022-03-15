@@ -59,7 +59,7 @@ return {
 
         if song == 6 then
             scene = love.filesystem.load("sprites/garcello/scene.lua")() -- IM SORRY I KNOW YOU PUT A LOT OF EFFORT INTO MAKING THIS WORK IM SORRY FOR JUST REMOVING IT	
-			scene.x, scene.y = 320, 180
+			scene.x, scene.y = 320, 180                                  -- :/
 
 			scene:animate("scene", false)
 
