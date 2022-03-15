@@ -19,10 +19,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 function love.load()
 	local curOS = love.system.getOS()
-	if love.system.getOS() ~= "Windows" then
-		systemOS = "nonWindows"
+	if love.system.getOS() ~= "Windows" then -- I forgor why this was here but then I rember
+		systemOS = "nonWindows" -- Loads fake love crash
 	else
-		systemOS = "windows"
+		systemOS = "windows" -- Loads fake windows crash
 	end
 
 	--load sounds
@@ -84,7 +84,6 @@ function love.load()
 	weeks2 = require "states.weeks/week2"
 	weeks1 = require "states.weeks/week1"
 	weekSmall = require "states.weeks/myDickSizeIfItWasAScreenResolution"
-	
 
 	fileExists = love.filesystem.getInfo("SUS/OH MY GOD ITS THE IMPOSTER FROM AMONG US.png")
 	if not fileExists then
