@@ -29,6 +29,9 @@ return {
 
 		canvas = love.graphics.newCanvas(16, 9)
 		font = love.graphics.newFont("fonts/pixel_small.fnt")
+		school = graphics.newImage(love.graphics.newImage(graphics.imagePath("small/school")))
+
+		enemy = love.filesystem.load("sprites/small/senpai.lua")()
 
 		weekSmall:enter()
 
@@ -37,23 +40,12 @@ return {
 
 		cam.sizeX, cam.sizeY = 1, 1
 		camScale.x, camScale.y = 1, 1
-
-		if song ~= 3 then
-			sky = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/sky")))
-			school = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/school")))
-			street = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/street")))
-			treesBack = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/trees-back")))
-
-			trees = love.filesystem.load("sprites/original/week6/trees.lua")()
-			petals = love.filesystem.load("sprites/original/week6/petals.lua")()
-			freaks = love.filesystem.load("sprites/original/week6/freaks.lua")()
-
-			sky.y = 1
-			school.y = 1
-		end
+		school.x = 8
+		school.y = 4
 
 		boyfriend.x, boyfriend.y = 12, 6
-		fakeBoyfriend.x, fakeBoyfriend.y = -12, 4
+		enemy.x, enemy.y = 6, 6
+		fakeBoyfriend.x, fakeBoyfriend.y = 12, 6
 
 		enemyIcon:animate("senpai", false)
 
@@ -61,19 +53,6 @@ return {
 	end,
 
 	load = function(self)
-		if song == 3 then
-			school = love.filesystem.load("sprites/original/week6/evil-school.lua")()
-			enemy = love.filesystem.load("sprites/original/week6/spirit.lua")()
-
-			enemyIcon:animate("spirit", false)
-		elseif song == 2 then
-			enemy = love.filesystem.load("sprites/original/week6/senpai-angry.lua")()
-
-			freaks:animate("dissuaded", true)
-		else
-			enemy = love.filesystem.load("sprites/original/week6/senpai.lua")()
-		end
-
 		weekSmall:load()
 
 		if song == 3 then
@@ -96,7 +75,12 @@ return {
 	initUI = function(self)
 		weekSmall:initUI()
 
-		if song == 3 then
+		--[[ NOTE TO CLOTHING HANGER
+
+		The weekSmall does NOT like hold notes. So if you can remake the charts without hold notes that would be great.
+
+		]]
+		if song == 3 then 
 			weekSmall:generateNotes(love.filesystem.load("charts/small/thorns" .. difficulty .. ".lua")())
 		elseif song == 2 then
 			weekSmall:generateNotes(love.filesystem.load("charts/small/roses" .. difficulty .. ".lua")())
@@ -109,14 +93,6 @@ return {
 		graphics.screenBase(16, 9)
 
 		weekSmall:update(dt)
-
-		if song == 3 then
-			school:update(dt)
-		else
-			trees:update(dt)
-			petals:update(dt)
-			freaks:update(dt)
-		end
 
 		if not (countingDown or graphics.isFading()) and not (inst:isPlaying() and voices:isPlaying()) then
 			if storyMode and song < 3 then
@@ -154,17 +130,16 @@ return {
 
 				love.graphics.push()
 					love.graphics.translate(math.floor(cam.x * 0.9), math.floor(cam.y * 0.9))
-
+					
 				love.graphics.pop()
 				love.graphics.push()
 					love.graphics.translate(math.floor(cam.x), math.floor(cam.y))
-
-                    trees:draw()
-
                    
 				love.graphics.pop()
 				weekSmall:drawRating()
 			love.graphics.pop()
+			school:draw()
+			enemy:draw()
             boyfriend:draw()
 
 			weekSmall:drawUI()

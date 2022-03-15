@@ -115,7 +115,7 @@ function love.load()
 
 	-- Load week data
 	weekData = {
-		require "weeks.original/tutorial",
+		require "weeks.myDickIfItWasAScreenResolution",
 		require "weeks.original/week1",
 		require "weeks.original/week2",
 		require "weeks.original/week3",
