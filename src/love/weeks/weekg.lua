@@ -38,16 +38,10 @@ return {
         garSleeping.x = -360 -- yeah they are just sleeping (do not look at the game over screen)
 		garSleeping.y = 200
 		bfSleeping.x, bfSleeping.y = 400, 200
-
-		enemy = love.filesystem.load("sprites/garcello/garcello.lua")()
+		
 		fakeBoyfriend = love.filesystem.load("sprites/garcello/dead.lua")() 
 
 		girlfriend.x, girlfriend.y = 50, -90
-		enemy.x, enemy.y = -380, 200
-		boyfriend.x, boyfriend.y = 260, 100
-		fakeBoyfriend.x, fakeBoyfriend.y = 400, 200
-
-		enemyIcon:animate("gar", false)
 
 		self:load()
 	end,
@@ -60,7 +54,7 @@ return {
         if song == 6 then
             scene = love.filesystem.load("sprites/garcello/scene.lua")() -- IM SORRY I KNOW YOU PUT A LOT OF EFFORT INTO MAKING THIS WORK IM SORRY FOR JUST REMOVING IT	
 			scene.x, scene.y = 320, 180                                  -- :/
-
+            --                                                              It's actually not that hard
 			scene:animate("scene", false)
 
             sceneIsPlaying = true
@@ -72,7 +66,6 @@ return {
 
             stageBack = graphics.newImage(love.graphics.newImage(graphics.imagePath("garcello/alley-back-rise")))
 		    stageFront = graphics.newImage(love.graphics.newImage(graphics.imagePath("garcello/alley-rise")))
-			enemyIcon:animate("gar", false)
 
 		elseif song == 3 then
 			inst = love.audio.newSource("music/garcello/release-inst.ogg", "stream")
@@ -119,23 +112,7 @@ return {
 	update = function(self, dt)
 		weeksGar:update(dt)
 
-		if health >= 80 then
-			if enemyIcon:getAnimName() == "gar" then
-				enemyIcon:animate("gar losing", false)
-			elseif enemyIcon:getAnimName() == "gar" then
-				enemyIcon:animate("gar losing", false)
-			elseif enemyIcon:getAnimName() == "gar" then
-				enemyIcon:animate("gar losing", false)
-			end
-		else
-			if enemyIcon:getAnimName() == "gar losing" then
-				enemyIcon:animate("gar", false)
-			elseif enemyIcon:getAnimName() == "gar losing" then
-				enemyIcon:animate("gar", false)
-			elseif enemyIcon:getAnimName() == "gar losing" then
-				enemyIcon:animate("gar", false)
-			end
-		end
+		--cam.x, cam.y = girlfriend.x, girlfriend.y
 
         if song == 3 then
             backSmoke:update(dt)
@@ -145,7 +122,7 @@ return {
 				tightBars = true
 			end
         elseif song == 5 then
-			penis = 1000
+			penis = 1000 -- ???????
 		end
 
 		if not (countingDown or graphics.isFading()) and not (inst:isPlaying() and voices:isPlaying()) then

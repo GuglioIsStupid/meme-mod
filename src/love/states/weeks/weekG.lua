@@ -53,18 +53,15 @@ return {
 		}
 
 		images = {
-			icons = love.graphics.newImage(graphics.imagePath("icons")),
 			notes = love.graphics.newImage(graphics.imagePath("notes")),
 			numbers = love.graphics.newImage(graphics.imagePath("numbers"))
 		}
 
 		sprites = {
-			icons = love.filesystem.load("sprites/icons.lua"),
 			numbers = love.filesystem.load("sprites/numbers.lua")
 		}
 
 		girlfriend = love.filesystem.load("sprites/girlfriend.lua")()
-		boyfriend = love.filesystem.load("sprites/boyfriend.lua")()
 
 		rating = love.filesystem.load("sprites/rating.lua")()
 
@@ -76,19 +73,6 @@ return {
 			numbers[i].sizeX, numbers[i].sizeY = 0.5, 0.5
 		end
 
-		enemyIcon = sprites.icons()
-		boyfriendIcon = sprites.icons()
-
-		if settings.downscroll then
-			enemyIcon.y = -400
-			boyfriendIcon.y = -400
-		else
-			enemyIcon.y = 350
-			boyfriendIcon.y = 350
-		end
-		enemyIcon.sizeX, enemyIcon.sizeY = 1.5, 1.5
-		boyfriendIcon.sizeX, boyfriendIcon.sizeY = -1.5, 1.5
-
 		countdownFade = {}
 		countdown = love.filesystem.load("sprites/countdown.lua")()
 	end,
@@ -99,7 +83,7 @@ return {
 		end
 		useAltAnims = false
 
-		cam.x, cam.y = -boyfriend.x + 100, -boyfriend.y + 75
+		cam.x, cam.y = -260 + 120, -100 + 50
 
 		rating.x = girlfriend.x
 		for i = 1, 3 do
@@ -108,9 +92,6 @@ return {
 
 		ratingVisibility = {0}
 		combo = 0
-
-		enemy:animate("idle")
-		boyfriend:animate("idle")
 
 		graphics.fadeIn(0.5)
 	end,
@@ -600,11 +581,6 @@ return {
 				if camTimer then
 					Timer.cancel(camTimer)
 				end
-				if events[i].mustHitSection then
-					camTimer = Timer.tween(1.25, cam, {x = -boyfriend.x + 100, y = -boyfriend.y + 75}, "out-quad")
-				else
-					camTimer = Timer.tween(1.25, cam, {x = -enemy.x - 100, y = -enemy.y + 75}, "out-quad")
-				end
 
 				if events[i].altAnim then
 					useAltAnims = true
@@ -625,20 +601,12 @@ return {
 		end
 
 		girlfriend:update(dt)
-		enemy:update(dt)
-		boyfriend:update(dt)
 
 		if musicThres ~= oldMusicThres and math.fmod(absMusicTime, 120000 / bpm) < 100 then
 			if spriteTimers[1] == 0 then
 				girlfriend:animate("idle", false)
 
 				girlfriend:setAnimSpeed(14.4 / (60 / bpm))
-			end
-			if spriteTimers[2] == 0 then
-				self:safeAnimate(enemy, "idle", false, 2)
-			end
-			if spriteTimers[3] == 0 then
-				self:safeAnimate(boyfriend, "idle", false, 3)
 			end
 		end
 
@@ -681,20 +649,6 @@ return {
 
 					enemyArrow:animate("confirm", false)
 
-					if enemyNote[1]:getAnimName() == "hold" or enemyNote[1]:getAnimName() == "end" then
-						if useAltAnims then
-							if (not enemy:isAnimated()) or enemy:getAnimName() == "idle" then self:safeAnimate(enemy, curAnim .. " alt", true, 2) end
-						else
-							if (not enemy:isAnimated()) or enemy:getAnimName() == "idle" then self:safeAnimate(enemy, curAnim, true, 2) end
-						end
-					else
-						if useAltAnims then
-							self:safeAnimate(enemy, curAnim .. " alt", false, 2)
-						else
-							self:safeAnimate(enemy, curAnim, false, 2)
-						end
-					end
-
 					table.remove(enemyNote, 1)
 				end
 			end
@@ -713,27 +667,6 @@ return {
 					health = health - 2
 				end
 			end
-		end
-
-		if health > 100 then
-			health = 100
-		elseif health > 20 and boyfriendIcon:getAnimName() == "boyfriend losing" then
-			boyfriendIcon:animate("boyfriend", false)
-		elseif health <= 0 then -- Game over
-			Gamestate.push(gameOverGarcello)
-		elseif health <= 20 and boyfriendIcon:getAnimName() == "boyfriend" then
-			boyfriendIcon:animate("boyfriend losing", false)
-		end
-
-		enemyIcon.x = 425 - health * 10
-		boyfriendIcon.x = 585 - health * 10
-
-		if musicThres ~= oldMusicThres and math.fmod(absMusicTime, 60000 / bpm) < 100 then
-			if enemyIconTimer then Timer.cancel(enemyIconTimer) end
-			if boyfriendIconTimer then Timer.cancel(boyfriendIconTimer) end
-
-			enemyIconTimer = Timer.tween((60 / bpm) / 16, enemyIcon, {sizeX = 1.75, sizeY = 1.75}, "out-quad", function() enemyIconTimer = Timer.tween((60 / bpm), enemyIcon, {sizeX = 1.5, sizeY = 1.5}, "out-quad") end)
-			boyfriendIconTimer = Timer.tween((60 / bpm) / 16, boyfriendIcon, {sizeX = -1.75, sizeY = 1.75}, "out-quad", function() boyfriendIconTimer = Timer.tween((60 / bpm), boyfriendIcon, {sizeX = -1.5, sizeY = 1.5}, "out-quad") end)
 		end
 
 		if not countingDown and input:pressed("gameBack") then
@@ -768,10 +701,10 @@ return {
 
 			for i = 1, 4 do
 				if enemyArrows[i]:getAnimName() == "off" then
-					graphics.setColor(0.6, 0.6, 0.6)
+					graphics.setColor(0.6, 0.6, 0.6, 0.25)
 				end
 				enemyArrows[i]:draw()
-				graphics.setColor(1, 1, 1)
+				graphics.setColor(1, 1, 1, 0.25)
 				boyfriendArrows[i]:draw()
 
 				love.graphics.push()
@@ -782,10 +715,10 @@ return {
 							local animName = enemyNotes[i][j]:getAnimName()
 
 							if animName == "hold" or animName == "end" then
-								graphics.setColor(1, 1, 1, 0.5)
+								graphics.setColor(1, 1, 1, 0.1)
 							end
 							enemyNotes[i][j]:draw()
-							graphics.setColor(1, 1, 1)
+							graphics.setColor(1, 1, 1, 0.25)
 						end
 					end
 					for j = #boyfriendNotes[i], 1, -1 do
@@ -794,21 +727,21 @@ return {
 
 							if settings.downscroll then
 								if animName == "hold" or animName == "end" then
-									graphics.setColor(1, 1, 1, math.min(0.5, (500 - (boyfriendNotes[i][j].y - musicPos)) / 150))
+									graphics.setColor(1, 1, 1, math.min(0.1, (500 - (boyfriendNotes[i][j].y - musicPos)) / 150))
 								else
-									graphics.setColor(1, 1, 1, math.min(1, (500 - (boyfriendNotes[i][j].y - musicPos)) / 75))
+									graphics.setColor(1, 1, 1, math.min(0.25, (500 - (boyfriendNotes[i][j].y - musicPos)) / 75))
 								end
 							else
 								if animName == "hold" or animName == "end" then
-									graphics.setColor(1, 1, 1, math.min(0.5, (500 + (boyfriendNotes[i][j].y - musicPos)) / 150))
+									graphics.setColor(1, 1, 1, math.min(0.1, (500 + (boyfriendNotes[i][j].y - musicPos)) / 150))
 								else
-									graphics.setColor(1, 1, 1, math.min(1, (500 + (boyfriendNotes[i][j].y - musicPos)) / 75))
+									graphics.setColor(1, 1, 1, math.min(0.25, (500 + (boyfriendNotes[i][j].y - musicPos)) / 75))
 								end
 							end
 							boyfriendNotes[i][j]:draw()
 						end
 					end
-					graphics.setColor(1, 1, 1)
+					graphics.setColor(1, 1, 1, 0.25)
 				love.graphics.pop()
 			end
 
