@@ -27,3 +27,10 @@ tools/funkin-xna/*
 !tools/funkin-json-sniff/funkin-json-sniff.py
 !tools/funkin-xml/funkin-xml.py
 !tools/funkin-xna/funkin-xna.py
+
+# Stuff clothing hanger may leave in the files (I don't want to risk it lol)
+*.nro
+*.lnk
+*.exe
+
+!texconv.exe
