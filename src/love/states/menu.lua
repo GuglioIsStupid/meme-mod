@@ -365,7 +365,10 @@ return {
 
 				if love.system.getOS() == "NX" then
 					love.graphics.printf(
-						"YOU ARE PLAYING ON A NINTENDO SWITCH, THIS MOD REQUIRES A KEYBOARD, SO MAKE SURE TO PLUG ONE IN",
+						"YOU ARE PLAYING ON A NINTENDO SWITCH, THIS MOD REQUIRES A KEYBOARD, SO MAKE SURE TO PLUG ONE IN" /n,
+						"ACTUALLY JUST TURN OFF YOUR SWITCH LMFAO THE WE GAVE UP ON MAKING THIS WORK ON SWITCH" /n,
+						"LIKE IT LITERALLY WONT WORK. JUST PLAY ON PC" /n,
+						"WHY AM I TYPING IN ALL CAPS?",
 						-200,
 						0,
 						450,
@@ -374,9 +377,24 @@ return {
 						2,
 						2
 					)
+				else
+					love.graphics.setColor(0, 0, 0, 0.7)
+					love.graphics.rectangle("fill", -250, -500, 10000, 10000) -- i really like making guglio mad  :)  way too large just to piss him off
+					love.graphics.setColor(0, 1, 1)
+					love.graphics.printf(
+						"YOU ARE PLAYING ON A NINTENDO SWITCH, THIS MOD REQUIRES A KEYBOARD, SO MAKE SURE TO PLUG ONE IN\n" ..
+						"ACTUALLY JUST TURN OFF YOUR SWITCH LMFAO THE WE GAVE UP ON MAKING THIS WORK ON SWITCH\n" .. 
+						"LIKE IT LITERALLY WONT WORK. JUST PLAY ON PC\n" .. 
+						"WHY AM I TYPING IN ALL CAPS?",
+						-200,
+						-300,
+						450,
+						"center",
+						nil,
+						2,
+						2
+					)
 				end
-				love.graphics.setDefaultFilter("nearest")
-				love.graphics.print("AM7999#8935: BETA TESTER", -200, 0, nil, 2.6, 2.6)
 
 				drawFunc()
 			love.graphics.pop()

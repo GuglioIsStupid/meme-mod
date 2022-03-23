@@ -133,7 +133,7 @@ stageFront.sizeX, stageFront.sizeY = 1.3, 1.3
 		end
 
 		week7:update(dt)
-		skittles:update(dt) --fuck you
+		skittles:update(dt) --fuck you (:skull: what did skittles do i literally dont remember)
 		smokeLeft:update(dt)
 		smokeRight:update(dt)
 		tank0:update(dt)
@@ -143,9 +143,9 @@ stageFront.sizeX, stageFront.sizeY = 1.3, 1.3
 		tank4:update(dt)
 		tank5:update(dt)
 
-		if song == 4 and musicThres ~= oldMusicThres and math.fmod(absMusicTime + 500, 480000 / bpm) < 100 then
+		if song == 4 and musicThres ~= oldMusicThres and math.fmod(absMusicTime + 500, 480000 / bpm) < 100 then -- guglio guess what
 			week7:safeAnimate(boyfriend, "hey", false, 3)
-		end
+		end 
 
 		if health >= 80 then
 			if enemyIcon:getAnimName() == "tankman" then

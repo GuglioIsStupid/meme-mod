@@ -2,8 +2,8 @@ local backFunc
 
 local selectSound = love.audio.newSource("sounds/menu/select.ogg", "static")
 
-
-local credits = graphics.newImage(love.graphics.newImage(graphics.imagePath("menu/credits/pogger_credits")))
+local credits = graphics.newImage(love.graphics.newImage(graphics.imagePath("menu/credits/creditScreenOne")))
+local creditsTwo = graphics.newImage(love.graphics.newImage(graphics.imagePath("menu/credits/creditScreenTwo")))
 
 return {
 	enter = function(self, previous)
@@ -12,6 +12,8 @@ return {
 
 		graphics.setFade(0)
 		graphics.fadeIn(0.5)
+
+		creditStateTwo = false
 
 	end,
 
@@ -27,9 +29,11 @@ return {
 		
 		if not graphics.isFading() then
 			if input:pressed("confirm") then
-				audio.playSound(selectSound)
-
-				Gamestate.switch(credits2)				
+				if not creditStateTwo then
+					creditStateTwo = true
+				else
+					creditStateTwo = false
+				end
 			end
 		end
 
@@ -38,7 +42,10 @@ return {
 		love.graphics.push()
 			love.graphics.translate(graphics.getWidth() / 2, graphics.getHeight() / 2)
 
-			credits:draw()
+			creditsTwo:draw()
+			if not creditStateTwo then
+				credits:draw()
+			end
 
 			love.graphics.push()
 				love.graphics.scale(cam.sizeX, cam.sizeY)
