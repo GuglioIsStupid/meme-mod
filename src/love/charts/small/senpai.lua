@@ -1,28 +1,8 @@
---[[----------------------------------------------------------------------------
-This file is part of Friday Night Funkin' Rewritten
-
-Copyright (C) 2021  HTV04
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-------------------------------------------------------------------------------]]
-
--- Automatically generated from senpai.json
+-- Automatically generated from senpai-hard.json
 return {
-	speed = 0.03,
+	speed = 0.05,
 	{
 		mustHitSection = false,
-		bpm = 144.0,
 		sectionNotes = {
 			{
 				noteTime = 0.0,
@@ -150,6 +130,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 7291.6665,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 7291.6665,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 7500.0,
 				noteType = 2,
 				noteLength = 312.5
@@ -186,12 +176,12 @@ return {
 			},
 			{
 				noteTime = 8750.0,
-				noteType = 5,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
 				noteTime = 8750.0,
-				noteType = 1,
+				noteType = 5,
 				noteLength = 0.0
 			},
 			{
@@ -216,12 +206,22 @@ return {
 			},
 			{
 				noteTime = 9583.333,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 9583.333,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 9583.333,
 				noteType = 7,
 				noteLength = 0.0
 			},
 			{
 				noteTime = 9583.333,
-				noteType = 0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -295,6 +295,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 11875.0,
+				noteType = 7,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 11875.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 12083.333,
 				noteType = 5,
 				noteLength = 0.0
@@ -302,6 +312,16 @@ return {
 			{
 				noteTime = 12083.333,
 				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 12291.666,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 12291.666,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -377,6 +397,11 @@ return {
 			{
 				noteTime = 15729.166,
 				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 16041.666,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -465,6 +490,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 22708.332,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 22916.666,
 				noteType = 1,
 				noteLength = 208.333328
@@ -516,13 +546,28 @@ return {
 		sectionNotes = {
 			{
 				noteTime = 26666.666,
+				noteType = 5,
+				noteLength = 729.1666
+			},
+			{
+				noteTime = 26666.666,
 				noteType = 0,
 				noteLength = 0.0
 			},
 			{
-				noteTime = 26666.666,
-				noteType = 5,
-				noteLength = 729.1666
+				noteTime = 26770.832,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 26875.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 26979.166,
+				noteType = 3,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 27083.332,
@@ -530,14 +575,19 @@ return {
 				noteLength = 0.0
 			},
 			{
-				noteTime = 27500.0,
-				noteType = 2,
+				noteTime = 27291.666,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
 				noteTime = 27500.0,
 				noteType = 7,
 				noteLength = 729.1666
+			},
+			{
+				noteTime = 27500.0,
+				noteType = 2,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 27708.332,
@@ -561,13 +611,13 @@ return {
 		sectionNotes = {
 			{
 				noteTime = 28333.332,
-				noteType = 7,
-				noteLength = 208.333328
+				noteType = 0,
+				noteLength = 729.1666
 			},
 			{
 				noteTime = 28333.332,
-				noteType = 0,
-				noteLength = 729.1666
+				noteType = 7,
+				noteLength = 208.333328
 			},
 			{
 				noteTime = 28750.0,
@@ -576,13 +626,13 @@ return {
 			},
 			{
 				noteTime = 29166.666,
-				noteType = 6,
-				noteLength = 0.0
+				noteType = 3,
+				noteLength = 729.1666
 			},
 			{
 				noteTime = 29166.666,
-				noteType = 3,
-				noteLength = 729.1666
+				noteType = 6,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 29375.0,
@@ -601,13 +651,13 @@ return {
 		sectionNotes = {
 			{
 				noteTime = 30000.0,
-				noteType = 3,
-				noteLength = 0.0
+				noteType = 6,
+				noteLength = 729.1666
 			},
 			{
 				noteTime = 30000.0,
-				noteType = 6,
-				noteLength = 729.1666
+				noteType = 3,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 30416.666,
@@ -652,7 +702,12 @@ return {
 			{
 				noteTime = 32500.0,
 				noteType = 1,
-				noteLength = 729.1666
+				noteLength = 625.0
+			},
+			{
+				noteTime = 32500.0,
+				noteType = 7,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 32708.332,
@@ -675,8 +730,28 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 33437.5,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 33541.6641,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 33645.832,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 33750.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 33958.332,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -766,6 +841,11 @@ return {
 			},
 			{
 				noteTime = 38958.332,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 39166.6641,
 				noteType = 3,
 				noteLength = 0.0
 			},
@@ -892,6 +972,16 @@ return {
 			{
 				noteTime = 45000.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 45208.332,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 45312.5,
+				noteType = 0,
 				noteLength = 0.0
 			},
 			{
@@ -1032,6 +1122,16 @@ return {
 			{
 				noteTime = 51666.6641,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 51875.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 51979.1641,
+				noteType = 0,
 				noteLength = 0.0
 			},
 			{
@@ -1200,6 +1300,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 60625.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 60625.0,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 60833.332,
 				noteType = 2,
 				noteLength = 312.5
@@ -1236,12 +1346,12 @@ return {
 			},
 			{
 				noteTime = 62083.332,
-				noteType = 5,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
 				noteTime = 62083.332,
-				noteType = 1,
+				noteType = 5,
 				noteLength = 0.0
 			},
 			{
@@ -1266,12 +1376,22 @@ return {
 			},
 			{
 				noteTime = 62916.6641,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 62916.6641,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 62916.6641,
 				noteType = 7,
 				noteLength = 0.0
 			},
 			{
 				noteTime = 62916.6641,
-				noteType = 0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1345,6 +1465,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 65208.332,
+				noteType = 7,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 65208.332,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 65416.6641,
 				noteType = 5,
 				noteLength = 0.0
@@ -1352,6 +1482,16 @@ return {
 			{
 				noteTime = 65416.6641,
 				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 65625.0,
+				noteType = 4,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 65625.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -1415,6 +1555,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 67291.6641,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 67500.0,
 				noteType = 1,
 				noteLength = 0.0
@@ -1427,6 +1572,11 @@ return {
 			{
 				noteTime = 67916.6641,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 68125.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1447,6 +1597,11 @@ return {
 			{
 				noteTime = 68750.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 68958.33,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -1485,6 +1640,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 70625.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 70833.33,
 				noteType = 1,
 				noteLength = 0.0
@@ -1497,6 +1657,11 @@ return {
 			{
 				noteTime = 71250.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 71458.33,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1517,6 +1682,11 @@ return {
 			{
 				noteTime = 72083.33,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 72291.6641,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -1560,6 +1730,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 74062.5,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 74166.6641,
 				noteType = 0,
 				noteLength = 0.0
@@ -1577,6 +1752,11 @@ return {
 			{
 				noteTime = 74791.6641,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 74895.83,
+				noteType = 2,
 				noteLength = 0.0
 			}
 		}
@@ -1645,6 +1825,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 77395.83,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 77500.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1662,6 +1847,11 @@ return {
 			{
 				noteTime = 78125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 78229.1641,
+				noteType = 2,
 				noteLength = 0.0
 			}
 		}
@@ -1962,6 +2152,16 @@ return {
 			{
 				noteTime = 91666.6641,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 91875.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 91979.1641,
+				noteType = 0,
 				noteLength = 0.0
 			},
 			{

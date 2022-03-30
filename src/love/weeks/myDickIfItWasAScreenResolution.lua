@@ -81,11 +81,11 @@ return {
 
 		]]
 		if song == 3 then 
-			weekSmall:generateNotes(love.filesystem.load("charts/small/thorns" .. difficulty .. ".lua")())
+			weekSmall:generateNotes(love.filesystem.load("charts/small/thorns.lua")())
 		elseif song == 2 then
-			weekSmall:generateNotes(love.filesystem.load("charts/small/roses" .. difficulty .. ".lua")())
+			weekSmall:generateNotes(love.filesystem.load("charts/small/roses.lua")())
 		else
-			weekSmall:generateNotes(love.filesystem.load("charts/small/senpai" .. difficulty .. ".lua")())
+			weekSmall:generateNotes(love.filesystem.load("charts/small/senpai.lua")())
 		end
 	end,
 

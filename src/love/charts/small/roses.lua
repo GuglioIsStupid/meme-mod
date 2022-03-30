@@ -1,28 +1,8 @@
---[[----------------------------------------------------------------------------
-This file is part of Friday Night Funkin' Rewritten
-
-Copyright (C) 2021  HTV04
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-------------------------------------------------------------------------------]]
-
--- Automatically generated from roses.json
+-- Automatically generated from roses-hard.json
 return {
-	speed = 0.03,
+	speed = 0.05,
 	{
 		mustHitSection = false,
-		bpm = 120.0,
 		sectionNotes = {
 			{
 				noteTime = 500.0,
@@ -55,6 +35,11 @@ return {
 		mustHitSection = false,
 		sectionNotes = {
 			{
+				noteTime = 2125.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 2375.0,
 				noteType = 2,
 				noteLength = 0.0
@@ -62,6 +47,11 @@ return {
 			{
 				noteTime = 2500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 2625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -125,6 +115,11 @@ return {
 		mustHitSection = true,
 		sectionNotes = {
 			{
+				noteTime = 6125.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 6375.0,
 				noteType = 2,
 				noteLength = 0.0
@@ -132,6 +127,11 @@ return {
 			{
 				noteTime = 6500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 6625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -170,8 +170,18 @@ return {
 				noteLength = 125.0
 			},
 			{
+				noteTime = 8250.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 8500.0,
 				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 8625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -183,6 +193,11 @@ return {
 				noteTime = 8875.0,
 				noteType = 3,
 				noteLength = 250.0
+			},
+			{
+				noteTime = 9250.0,
+				noteType = 1,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 9500.0,
@@ -212,6 +227,11 @@ return {
 			{
 				noteTime = 10500.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 10750.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -245,8 +265,18 @@ return {
 				noteLength = 125.0
 			},
 			{
+				noteTime = 12250.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 12500.0,
 				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 12625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -258,6 +288,11 @@ return {
 				noteTime = 12875.0,
 				noteType = 3,
 				noteLength = 250.0
+			},
+			{
+				noteTime = 13250.0,
+				noteType = 1,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 13500.0,
@@ -290,6 +325,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 14750.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 14875.0,
 				noteType = 3,
 				noteLength = 250.0
@@ -317,6 +357,11 @@ return {
 			{
 				noteTime = 16500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 16625.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -370,6 +415,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 18750.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 19000.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -397,6 +447,11 @@ return {
 			{
 				noteTime = 20500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 20625.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -450,6 +505,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 22750.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 23000.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -485,8 +545,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 24375.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 24625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 24750.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -513,6 +583,11 @@ return {
 				noteTime = 25750.0,
 				noteType = 3,
 				noteLength = 0.0
+			},
+			{
+				noteTime = 25875.0,
+				noteType = 1,
+				noteLength = 0.0
 			}
 		}
 	},
@@ -530,8 +605,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 26375.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 26625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 26750.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -575,8 +660,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 28375.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 28625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 28750.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -603,6 +698,11 @@ return {
 				noteTime = 29750.0,
 				noteType = 3,
 				noteLength = 0.0
+			},
+			{
+				noteTime = 29875.0,
+				noteType = 1,
+				noteLength = 0.0
 			}
 		}
 	},
@@ -620,8 +720,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 30375.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 30625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 30750.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -662,6 +772,11 @@ return {
 			{
 				noteTime = 32250.002,
 				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 32375.002,
+				noteType = 0,
 				noteLength = 0.0
 			},
 			{
@@ -715,6 +830,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 34375.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 34500.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -762,6 +882,11 @@ return {
 			{
 				noteTime = 36250.0,
 				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 36375.0,
+				noteType = 0,
 				noteLength = 0.0
 			},
 			{
@@ -815,6 +940,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 38375.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 38500.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -860,8 +990,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 40125.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 40250.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 40375.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -895,6 +1035,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 41500.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 41625.0,
 				noteType = 1,
 				noteLength = 0.0
@@ -917,6 +1062,11 @@ return {
 			{
 				noteTime = 42250.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 42375.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -970,8 +1120,18 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 44125.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 44250.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 44375.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -1005,6 +1165,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 45500.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 45625.0,
 				noteType = 1,
 				noteLength = 0.0
@@ -1027,6 +1192,11 @@ return {
 			{
 				noteTime = 46250.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 46375.0,
+				noteType = 3,
 				noteLength = 0.0
 			},
 			{
@@ -1080,8 +1250,23 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 48125.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 48250.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 48375.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 48500.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -1110,6 +1295,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 49250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 49375.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -1130,7 +1320,27 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 50125.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 50250.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 50375.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 50500.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 50625.0,
 				noteType = 0,
 				noteLength = 0.0
 			},
@@ -1141,6 +1351,16 @@ return {
 			},
 			{
 				noteTime = 50875.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 51000.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 51125.0,
 				noteType = 0,
 				noteLength = 0.0
 			},
@@ -1157,7 +1377,7 @@ return {
 			{
 				noteTime = 51500.0,
 				noteType = 1,
-				noteLength = 0.0
+				noteLength = 375.0
 			}
 		}
 	},
@@ -1170,8 +1390,23 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 52125.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 52250.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 52375.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 52500.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -1200,6 +1435,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 53250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 53375.0,
 				noteType = 3,
 				noteLength = 0.0
@@ -1220,7 +1460,27 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 54125.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 54250.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 54375.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 54500.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 54625.0,
 				noteType = 0,
 				noteLength = 0.0
 			},
@@ -1231,6 +1491,16 @@ return {
 			},
 			{
 				noteTime = 54875.0,
+				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 55000.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 55125.0,
 				noteType = 0,
 				noteLength = 0.0
 			},
@@ -1247,7 +1517,7 @@ return {
 			{
 				noteTime = 55500.0,
 				noteType = 1,
-				noteLength = 0.0
+				noteLength = 375.0
 			}
 		}
 	},
@@ -1262,6 +1532,11 @@ return {
 			{
 				noteTime = 56125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 56250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1280,6 +1555,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 56750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 56875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 57000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1287,6 +1572,11 @@ return {
 			{
 				noteTime = 57125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 57250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1302,6 +1592,16 @@ return {
 			{
 				noteTime = 57625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 57750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 57875.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1320,6 +1620,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 58250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 58375.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1335,6 +1640,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 58750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 58875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 59000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1342,6 +1657,11 @@ return {
 			{
 				noteTime = 59125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 59250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1357,6 +1677,16 @@ return {
 			{
 				noteTime = 59625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 59750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 59875.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1375,6 +1705,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 60250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 60375.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1390,6 +1725,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 60750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 60875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 61000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1397,6 +1742,11 @@ return {
 			{
 				noteTime = 61125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 61250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1412,6 +1762,16 @@ return {
 			{
 				noteTime = 61625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 61750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 61875.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1430,6 +1790,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 62250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 62375.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1445,6 +1810,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 62750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 62875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 63000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1452,6 +1827,11 @@ return {
 			{
 				noteTime = 63125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 63250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1467,6 +1847,16 @@ return {
 			{
 				noteTime = 63625.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 63750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 63875.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
@@ -1505,6 +1895,11 @@ return {
 		mustHitSection = false,
 		sectionNotes = {
 			{
+				noteTime = 66125.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 66375.0,
 				noteType = 2,
 				noteLength = 0.0
@@ -1512,6 +1907,11 @@ return {
 			{
 				noteTime = 66500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 66625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1575,6 +1975,11 @@ return {
 		mustHitSection = true,
 		sectionNotes = {
 			{
+				noteTime = 70125.0,
+				noteType = 2,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 70375.0,
 				noteType = 2,
 				noteLength = 0.0
@@ -1582,6 +1987,11 @@ return {
 			{
 				noteTime = 70500.0,
 				noteType = 0,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 70625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1620,8 +2030,18 @@ return {
 				noteLength = 125.0
 			},
 			{
+				noteTime = 72250.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 72500.0,
 				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 72625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1633,6 +2053,11 @@ return {
 				noteTime = 72875.0,
 				noteType = 3,
 				noteLength = 250.0
+			},
+			{
+				noteTime = 73250.0,
+				noteType = 1,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 73500.0,
@@ -1662,6 +2087,11 @@ return {
 			{
 				noteTime = 74500.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 74750.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -1695,8 +2125,18 @@ return {
 				noteLength = 125.0
 			},
 			{
+				noteTime = 76250.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 76500.0,
 				noteType = 2,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 76625.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1708,6 +2148,11 @@ return {
 				noteTime = 76875.0,
 				noteType = 3,
 				noteLength = 250.0
+			},
+			{
+				noteTime = 77250.0,
+				noteType = 1,
+				noteLength = 0.0
 			},
 			{
 				noteTime = 77500.0,
@@ -1737,6 +2182,11 @@ return {
 			{
 				noteTime = 78500.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 78750.0,
+				noteType = 2,
 				noteLength = 0.0
 			},
 			{
@@ -1775,6 +2225,11 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 80250.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 80375.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1790,6 +2245,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 80750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 80875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 81000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1797,6 +2262,11 @@ return {
 			{
 				noteTime = 81125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 81250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1818,6 +2288,11 @@ return {
 				noteTime = 81750.0,
 				noteType = 1,
 				noteLength = 0.0
+			},
+			{
+				noteTime = 81875.0,
+				noteType = 3,
+				noteLength = 0.0
 			}
 		}
 	},
@@ -1832,6 +2307,11 @@ return {
 			{
 				noteTime = 82125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 82250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1850,6 +2330,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 82750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 82875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 83000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1857,6 +2347,11 @@ return {
 			{
 				noteTime = 83125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 83250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1878,6 +2373,11 @@ return {
 				noteTime = 83750.0,
 				noteType = 1,
 				noteLength = 0.0
+			},
+			{
+				noteTime = 83875.0,
+				noteType = 3,
+				noteLength = 0.0
 			}
 		}
 	},
@@ -1892,6 +2392,11 @@ return {
 			{
 				noteTime = 84125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 84250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1910,6 +2415,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 84750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 84875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 85000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1917,6 +2432,11 @@ return {
 			{
 				noteTime = 85125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 85250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1938,6 +2458,11 @@ return {
 				noteTime = 85750.0,
 				noteType = 1,
 				noteLength = 0.0
+			},
+			{
+				noteTime = 85875.0,
+				noteType = 3,
+				noteLength = 0.0
 			}
 		}
 	},
@@ -1952,6 +2477,11 @@ return {
 			{
 				noteTime = 86125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 86250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1970,6 +2500,16 @@ return {
 				noteLength = 0.0
 			},
 			{
+				noteTime = 86750.0,
+				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 86875.0,
+				noteType = 3,
+				noteLength = 0.0
+			},
+			{
 				noteTime = 87000.0,
 				noteType = 0,
 				noteLength = 0.0
@@ -1977,6 +2517,11 @@ return {
 			{
 				noteTime = 87125.0,
 				noteType = 3,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 87250.0,
+				noteType = 1,
 				noteLength = 0.0
 			},
 			{
@@ -1997,6 +2542,11 @@ return {
 			{
 				noteTime = 87750.0,
 				noteType = 1,
+				noteLength = 0.0
+			},
+			{
+				noteTime = 87875.0,
+				noteType = 3,
 				noteLength = 0.0
 			}
 		}
