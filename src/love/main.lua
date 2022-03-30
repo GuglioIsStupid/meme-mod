@@ -52,8 +52,8 @@ function love.load()
 	secretMenu = require "states.SecretMenuPlaceholder"
 	secretMenuCrash = require "states.doNotPressAOrEnter"
 	dietzNuts = require "states.dietzNuts"
-	credits2 = require "states.credits2"
-	crash = require "states.No_More_Friday_Night_Funkin" -- THIS STILL NEEDS TO BE CHANGED TO LOAD QUAVER WEEK BUT I HAVE NO IDEA HOW TOO 
+	--credits2 = require "states.credits2" no longer needed because i became un stupid :)
+	--crash = require "states.No_More_Friday_Night_Funkin" -- THIS STILL NEEDS TO BE CHANGED TO LOAD QUAVER WEEK BUT I HAVE NO IDEA HOW TOO (WHAT EVEN IS THIS)
 	gMenu = require "states.garcelloMenu/menu"
 	gWeekMenu = require "states.garcelloMenu/menuWeek"
 	gMainMenu = require "states.garcelloMenu/menuSelect"
@@ -62,7 +62,7 @@ function love.load()
 	amogusDead = require "states.amogusDead"
 	victoryVideo = require "states.victory"
 	
-	--load easter egg weeks
+	--load easter egg weeks (THESE ARE SECRET GET THE FUCK OUT OF HERE)
 	quaverWeek = require "weeks.quaver"
 	victoryWeek = require "weeks.victory"
 	oneK_Week = require "weeks.1k"
@@ -83,12 +83,12 @@ function love.load()
 	weeksGar = require "states.weeks/weekG"
 	weeks2 = require "states.weeks/week2"
 	weeks1 = require "states.weeks/week1"
-	weekSmall = require "states.weeks/myDickSizeIfItWasAScreenResolution"
+	weekSmall = require "states.weeks/myDickSizeIfItWasAScreenResolution" -- (this is referring to Guglio's dick size, not CH's)
 
 	fileExists = love.filesystem.getInfo("SUS/OH MY GOD ITS THE IMPOSTER FROM AMONG US.png")
 	if not fileExists then
 		--load the fucking fnaf security breach secret gallery easter egg thing
-		gallery = require "states.fnaf/gallery"
+		gallery = require "states.fnaf/gallery" --:skull: the way this works is so bad but im not fixing it
 		freddy = require "states.fnaf/freddy"
 		chica = require "states.fnaf/chica"
 		roxy = require "states.fnaf/roxy"
