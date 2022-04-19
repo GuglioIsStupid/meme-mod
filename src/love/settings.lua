@@ -17,35 +17,43 @@ local curOS = love.system.getOS()
 
 local settingsStr = (curOS == "NX" and [[
 ; Friday Night Funkin' Rewritten Settings (Switch)
+
 [Video]
 ; Use hardware-compressed image formats to save RAM, disabling this will make the game eat your RAM for breakfast (and increase load times)
 hardwareCompression=true
+
 [Audio]
 ; Master volume
 ; Possible values: 0.0-1.0
 volume=1.0
+
 [Game]
 ; Sets your arrow keybinds to DFJK
 dfjk=false
 ; "Downscroll" makes arrows scroll down instead of up, and also moves some aspects of the UI around
 downscroll=false
+
 ; "Kade Input" disables anti-spam, but counts "Shit" inputs as misses
 ; NOTE: Currently unfinished, some aspects of this input mode still need to be implemented, like mash violations
 kadeInput=false
+
 [Advanced]
 ; Show debug info on the screen
 ; Possible values: false, fps, detailed
 showDebug=false
+
 ; These variables are read by the game for internal purposes, don't edit these unless you want to risk losing your current settings!
 [Data]
 settingsVer=4-nx
 ]]) or (curOS ~= "Web" and [[
 ; Friday Night Funkin' Rewritten Settings
+
 [Video]
 ; Screen/window width and height (you should change this to your device's screen resolution if you are using the "exclusive" fullscreen type)
 ; NOTE: These settings will be ignored if using the "desktop" fullscreen type
 width=1280
 height=720
+
 ; Fullscreen settings, if you don't want Vsync (60 FPS cap), set "fullscreenType" to "exclusive" and "vsync" to "0"
 fullscreen=false
 fullscreenType=desktop
@@ -54,22 +62,28 @@ vsync=1
 ; WARNING: Don't disable this on 32-bit versions of the game, or the game will quickly run out of memory and crash (thanks to the 2 GB RAM cap)
 ; NOTE: If hardware compression is not supported on your device, this option will be silently ignored
 hardwareCompression=true
+
 [Audio]
 ; Master volume
 ; Possible values: 0.0-1.0
 volume=1.0
+
 [Game]
 ; Sets your arrow keybinds to DFJK
 dfjk=false
+
 ; "Downscroll" makes arrows scroll down instead of up, and also moves some aspects of the UI around
 downscroll=false
+
 ; "Kade Input" disables anti-spam, but counts "Shit" inputs as misses
 ; NOTE: Currently unfinished, some aspects of this input mode still need to be implemented, like mash violations
 kadeInput=false
+
 [Advanced]
 ; Show debug info on the screen
 ; Possible values: false, fps, detailed
 showDebug=false
+
 ; These variables are read by the game for internal purposes, don't edit these unless you want to risk losing your current settings!
 [Data]
 settingsVer=4
