@@ -26,8 +26,8 @@ return {
 	enter = function(self, from, songNum, songAppend)
 		crib:enter()
 
-		song = songNum
-		difficulty = songAppend
+		song = 1
+
 
 		cam.sizeX, cam.sizeY = 1, 1
 		camScale.x, camScale.y = 1, 1
@@ -63,7 +63,7 @@ return {
 		enemy.sizeX = 1 -- Reverse, reverse! NO WE DONT WANT TO REVERSE YOU YOURE NOT PICO
 		boyfriend.x, boyfriend.y = 165, 50
 
-		enemyIcon:animate("pico", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -99,12 +99,12 @@ return {
 
 
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "monster" then
-				enemyIcon:animate("monster losing", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
-			if enemyIcon:getAnimName() == "monster losing" then
-				enemyIcon:animate("monster", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

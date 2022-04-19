@@ -129,7 +129,7 @@ return {
 		countdownFade = {}
 		countdown = love.filesystem.load("sprites/original/countdown.lua")()
 
-		enemyIcon:animate("dearest duo", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -162,7 +162,7 @@ return {
 
 			enemy.x, enemy.y = -780, 420
 
-			enemyIcon:animate("monster", false)
+			enemyIcon:animate("daddy dearest losing", false)
 
 			inst = love.audio.newSource("music/original/week5/winter-horrorland-inst.ogg", "stream")
 			voices = love.audio.newSource("music/original/week5/winter-horrorland-voices.ogg", "stream")
@@ -253,22 +253,22 @@ return {
 
 			if song == 3 then
 				if health >= 80 then
-					if enemyIcon:getAnimName() == "monster" then
-						enemyIcon:animate("monster losing", false)
+					if enemyIcon:getAnimName() == "daddy dearest losing" then
+						enemyIcon:animate("daddy dearest losing", false)
 					end
 				else
-					if enemyIcon:getAnimName() == "monster losing" then
-						enemyIcon:animate("monster", false)
+					if enemyIcon:getAnimName() == "daddy dearest losing" then
+						enemyIcon:animate("daddy dearest losing", false)
 					end
 				end
 			else
 				if health >= 80 then
-					if enemyIcon:getAnimName() == "dearest duo" then
-						enemyIcon:animate("dearest duo losing", false)
+					if enemyIcon:getAnimName() == "daddy dearest losing" then
+						enemyIcon:animate("daddy dearest losing", false)
 					end
 				else
-					if enemyIcon:getAnimName() == "dearest duo losing" then
-						enemyIcon:animate("dearest duo", false)
+					if enemyIcon:getAnimName() == "daddy dearest losing" then
+						enemyIcon:animate("daddy dearest losing", false)
 					end
 				end
 			end

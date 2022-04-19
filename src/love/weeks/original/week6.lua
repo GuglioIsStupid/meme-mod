@@ -47,6 +47,10 @@ return {
 			school = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/school")))
 			street = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/street")))
 			treesBack = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week6/trees-back")))
+			spaceBar = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/spaceBar")))
+
+			spaceBar.sizeX, spaceBar.sizeY = 0.6, 0.6
+			spaceBar.y = 25
 
 			trees = love.filesystem.load("sprites/original/week6/trees.lua")()
 			petals = love.filesystem.load("sprites/original/week6/petals.lua")()
@@ -110,6 +114,25 @@ return {
 	end,
 
 	update = function(self, dt)
+
+
+		if song ~= 3 then
+			if input:pressed("gameUp") then
+				girlfriend.y = girlfriend.y - 3
+			end
+		end
+	
+		
+		if input:pressed("oneK") then
+			if song ~= 3 then
+				Gamestate.switch(tinyResolutionWeek)
+			end
+		end
+		
+
+
+
+
 		graphics.screenBase(256, 144)
 
 		weeksPixel:update(dt)
@@ -176,7 +199,7 @@ return {
 						petals:draw()
 						freaks:draw()
 					end
-
+					spaceBar:draw()
 					girlfriend:draw()
 					enemy:draw()
 					boyfriend:draw()

@@ -75,6 +75,7 @@ function love.load()
 	cribWeek = require "weeks.week3"
 	garcelloWeek = require "weeks.weekg"
 	fuckedUpInTheCrib = require "weeks.week3"
+	tinyResolutionWeek = require "weeks.myDickIfItWasAScreenResolution"
 
 	--load week states (because theres a lot lmfao)
 	weeks = require "states.weeks/week"
@@ -121,7 +122,7 @@ function love.load()
 
 	-- Load week data
 	weekData = {
-		require "weeks.myDickIfItWasAScreenResolution",
+		require "weeks.original/tutorial",
 		require "weeks.original/week1",
 		require "weeks.original/week2",
 		require "weeks.original/week3",
@@ -131,13 +132,13 @@ function love.load()
 	}
 	week7Data = { -- FUCKING PLACEHOLDERS I STILL NEED TO REMOVE
 		require "weeks.week2",
-		require "weeks.week3",
-		require "weeks.1k",
-		require "weeks.victory",
-		require "weeks.monochrome", --this is so bad
-		require "weeks.fridayNightFuckshit2", --this is also so bad
-		require "weeks.weekg",
-		require "weeks.quaver"
+	--	require "weeks.week3",
+	--	require "weeks.1k",
+	--	require "weeks.victory",
+	--	require "weeks.monochrome", --this is so bad
+	--	require "weeks.fridayNightFuckshit2", --this is also so bad
+	--	require "weeks.weekg",
+	--	require "weeks.quaver"
 	}
 	weekDataG = {
 		require "weeks.original/tutorial",

@@ -45,7 +45,7 @@ return {
 		killYourself.x, killYourself.y = 30, -15 --DONT ACTUALLY     I MEAN IN THE GAME NOT REAL LIFE
 		killYourself.sizeX, killYourself.sizeY = 0.5, 0.5
 
-		enemyIcon:animate("girlfriend", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,

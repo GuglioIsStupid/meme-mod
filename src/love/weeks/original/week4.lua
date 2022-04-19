@@ -118,7 +118,7 @@ return {
 		countdownFade = {}
 		countdown = love.filesystem.load("sprites/countdown.lua")()
 
-		enemyIcon:animate("mommy mearest", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -184,12 +184,12 @@ return {
 		end
 
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "mommy mearest" then
-				enemyIcon:animate("mommy mearest losing", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
-			if enemyIcon:getAnimName() == "mommy mearest losing" then
-				enemyIcon:animate("mommy mearest", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

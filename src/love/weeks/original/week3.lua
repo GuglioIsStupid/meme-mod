@@ -59,7 +59,7 @@ return {
 		enemy.sizeX = -1 -- Reverse, reverse!
 		boyfriend.x, boyfriend.y = 165, 50
 
-		enemyIcon:animate("pico", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -120,12 +120,12 @@ return {
 		
 
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "pico" then
-				enemyIcon:animate("pico losing", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
-			if enemyIcon:getAnimName() == "pico losing" then
-				enemyIcon:animate("pico", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

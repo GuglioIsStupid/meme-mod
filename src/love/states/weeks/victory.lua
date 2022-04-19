@@ -961,6 +961,11 @@ return {
 
 			graphics.setColor(1, 1, 1, countdownFade[1])
 			countdown:draw()
+
+			if countingDown then
+				love.graphics.setColor(1, 1, 1, 1)
+				love.graphics.printf("Defeat but backwards (miss all arrows)", -640, 0, 853, "center", nil, 1.8, 1.8)
+			end
 			graphics.setColor(1, 1, 1)
 		love.graphics.pop()
 	end,

@@ -53,6 +53,8 @@ return {
 			death = love.audio.newSource("sounds/death.ogg", "static")
 		}
 
+		DOWNSCROLLFORCE = true
+
 		images = {
 			icons = love.graphics.newImage(graphics.imagePath("icons")),
 			notes = love.graphics.newImage(graphics.imagePath("quaver/notesq")),
@@ -81,7 +83,7 @@ return {
 		enemyIcon = sprites.icons()
 		boyfriendIcon = sprites.icons()
 
-		if settings.downscroll then
+		if DOWNSCROLLFORCE then
 			enemyIcon.y = -400
 			boyfriendIcon.y = -400
 		else
@@ -150,13 +152,8 @@ return {
 		for i = 1, 4 do
 			boyfriendArrows[i].x = -440 + 165 * i
 			enemyArrows[i].x = -3000 + 165 * i 
-			if settings.downscroll then
-				enemyArrows[i].y = 400
-				boyfriendArrows[i].y = 400
-			else
-				enemyArrows[i].y = -400
-				boyfriendArrows[i].y = -400
-			end
+			enemyArrows[i].y = 400
+			boyfriendArrows[i].y = 400
 
 			enemyNotes[i] = {}
 			boyfriendNotes[i] = {}
@@ -204,7 +201,7 @@ return {
 					sprite = sprites.rightArrow
 				end
 
-				if settings.downscroll then
+				if DOWNSCROLLFORCE then
 					if mustHitSection then
 						if noteType >= 4 then
 							local id = noteType - 3
@@ -469,7 +466,7 @@ return {
 			end
 		end
 
-		if settings.downscroll then
+		if DOWNSCROLLFORCE then
 			for i = 1, 4 do
 				table.sort(enemyNotes[i], function(a, b) return a.y > b.y end)
 				table.sort(boyfriendNotes[i], function(a, b) return a.y > b.y end)
@@ -488,7 +485,7 @@ return {
 			for j = 2, #enemyNotes[i] do
 				local index = j - offset
 
-				if enemyNotes[i][index]:getAnimName() == "on" and enemyNotes[i][index - 1]:getAnimName() == "on" and ((not settings.downscroll and enemyNotes[i][index].y - enemyNotes[i][index - 1].y <= 10) or (settings.downscroll and enemyNotes[i][index].y - enemyNotes[i][index - 1].y >= -10)) then
+				if enemyNotes[i][index]:getAnimName() == "on" and enemyNotes[i][index - 1]:getAnimName() == "on" and ((not DOWNSCROLLFORCE and enemyNotes[i][index].y - enemyNotes[i][index - 1].y <= 10) or (DOWNSCROLLFORCE and enemyNotes[i][index].y - enemyNotes[i][index - 1].y >= -10)) then
 					table.remove(enemyNotes[i], index)
 
 					offset = offset + 1
@@ -501,7 +498,7 @@ return {
 			for j = 2, #boyfriendNotes[i] do
 				local index = j - offset
 
-				if boyfriendNotes[i][index]:getAnimName() == "on" and boyfriendNotes[i][index - 1]:getAnimName() == "on" and ((not settings.downscroll and boyfriendNotes[i][index].y - boyfriendNotes[i][index - 1].y <= 10) or (settings.downscroll and boyfriendNotes[i][index].y - boyfriendNotes[i][index - 1].y >= -10)) then
+				if boyfriendNotes[i][index]:getAnimName() == "on" and boyfriendNotes[i][index - 1]:getAnimName() == "on" and ((not DOWNSCROLLFORCE and boyfriendNotes[i][index].y - boyfriendNotes[i][index - 1].y <= 10) or (DOWNSCROLLFORCE and boyfriendNotes[i][index].y - boyfriendNotes[i][index - 1].y >= -10)) then
 					table.remove(boyfriendNotes[i], index)
 
 					offset = offset + 1
@@ -646,7 +643,7 @@ return {
 	end,
 
 	updateUI = function(self, dt)
-		if settings.downscroll then
+		if DOWNSCROLLFORCE then
 			musicPos = -musicTime * 0.6 * speed
 		else
 			musicPos = musicTime * 0.6 * speed
@@ -670,7 +667,7 @@ return {
 			end
 
 			if #enemyNote > 0 then
-				if (not settings.downscroll and enemyNote[1].y - musicPos <= -400) or (settings.downscroll and enemyNote[1].y - musicPos >= 400) then
+				if (not DOWNSCROLLFORCE and enemyNote[1].y - musicPos <= -400) or (DOWNSCROLLFORCE and enemyNote[1].y - musicPos >= 400) then
 					voices:setVolume(1)
 
 					enemyArrow:animate("confirm", false)
@@ -694,7 +691,7 @@ return {
 			end
 
 			if #boyfriendNote > 0 then
-				if (not settings.downscroll and boyfriendNote[1].y - musicPos < -500) or (settings.downscroll and boyfriendNote[1].y - musicPos > 500) then
+				if (not DOWNSCROLLFORCE and boyfriendNote[1].y - musicPos < -500) or (DOWNSCROLLFORCE and boyfriendNote[1].y - musicPos > 500) then
 					if inst then voices:setVolume(0) end
 
 					notMissed[noteNum] = false
@@ -722,13 +719,13 @@ return {
 				if #boyfriendNote > 0 then
 					for i = 1, #boyfriendNote do
 						if boyfriendNote[i] and boyfriendNote[i]:getAnimName() == "on" then
-							if (not settings.downscroll and boyfriendNote[i].y - musicPos <= -280) or (settings.downscroll and boyfriendNote[i].y - musicPos >= 280) then
+							if (not DOWNSCROLLFORCE and boyfriendNote[i].y - musicPos <= -280) or (DOWNSCROLLFORCE and boyfriendNote[i].y - musicPos >= 280) then
 								local notePos
 								local ratingAnim
 
 								notMissed[noteNum] = true
 
-								if settings.downscroll then
+								if DOWNSCROLLFORCE then
 									notePos = math.abs(400 - (boyfriendNote[i].y - musicPos))
 								else
 									notePos = math.abs(-400 - (boyfriendNote[i].y - musicPos))
@@ -736,26 +733,21 @@ return {
 
 								voices:setVolume(1)
 
-								if notePos <= 30 then -- "Sick"
+								if notePos <= 35 then -- "Sick"
 									score = score + 350
 									sicks = sicks + 1
 									ratingQ = 4
-								elseif notePos <= 70 then -- "Good"
+								elseif notePos <= 75 then -- "Good"
 									score = score + 200
 									goods = goods + 1
 									ratingQ = 3
-								elseif notePos <= 90 then -- "Bad"
+								elseif notePos <= 95 then -- "Bad"
 									score = score + 100
 									bads = bads + 1
 									ratingQ = 2
 								else -- "Shit"
-									if settings.kadeInput then
-										success = false
-										misses = misses + 1
-									else
-										score = score + 50
-										shits = shits + 1
-									end
+									score = score + 50
+									shits = shits + 1
 									ratingQ = 1
 								end
 								combo = combo + 1
@@ -809,7 +801,7 @@ return {
 				end
 			end
 
-			if notMissed[noteNum] and #boyfriendNote > 0 and input:down(curInput) and ((not settings.downscroll and boyfriendNote[1].y - musicPos <= -400) or (settings.downscroll and boyfriendNote[1].y - musicPos >= 400)) and (boyfriendNote[1]:getAnimName() == "hold" or boyfriendNote[1]:getAnimName() == "end") then
+			if notMissed[noteNum] and #boyfriendNote > 0 and input:down(curInput) and ((not DOWNSCROLLFORCE and boyfriendNote[1].y - musicPos <= -400) or (DOWNSCROLLFORCE and boyfriendNote[1].y - musicPos >= 400)) and (boyfriendNote[1]:getAnimName() == "hold" or boyfriendNote[1]:getAnimName() == "end") then
 				voices:setVolume(1)
 
 				table.remove(boyfriendNote, 1)
@@ -884,7 +876,7 @@ return {
 					love.graphics.translate(0, -musicPos)
 
 					for j = #enemyNotes[i], 1, -1 do
-						if (not settings.downscroll and enemyNotes[i][j].y - musicPos <= 560) or (settings.downscroll and enemyNotes[i][j].y - musicPos >= -560) then
+						if (not DOWNSCROLLFORCE and enemyNotes[i][j].y - musicPos <= 560) or (DOWNSCROLLFORCE and enemyNotes[i][j].y - musicPos >= -560) then
 							local animName = enemyNotes[i][j]:getAnimName()
 
 							if animName == "hold" or animName == "end" then
@@ -895,10 +887,10 @@ return {
 						end
 					end
 					for j = #boyfriendNotes[i], 1, -1 do
-						if (not settings.downscroll and boyfriendNotes[i][j].y - musicPos <= 560) or (settings.downscroll and boyfriendNotes[i][j].y - musicPos >= -560) then
+						if (not DOWNSCROLLFORCE and boyfriendNotes[i][j].y - musicPos <= 560) or (DOWNSCROLLFORCE and boyfriendNotes[i][j].y - musicPos >= -560) then
 							local animName = boyfriendNotes[i][j]:getAnimName()
 
-							if settings.downscroll then
+							if DOWNSCROLLFORCE then
 								if animName == "hold" or animName == "end" then
 									graphics.setColor(1, 1, 1, math.min(0.5, (500 - (boyfriendNotes[i][j].y - musicPos)) / 150))
 								else
@@ -918,85 +910,68 @@ return {
 				love.graphics.pop()
 			end
 
-			if settings.downscroll then
-				graphics.setColor(1, 1, 1)
-				love.graphics.rectangle("fill", 500, -400, -health * 10, 25)
-				graphics.setColor(0, 0, 0)
-				love.graphics.setLineWidth(10)
-			else
-				graphics.setColor(1, 1, 1)
-				love.graphics.rectangle("fill", 450, 550, 25, -health * 10)
-				graphics.setColor(0, 0, 0)
+			graphics.setColor(1, 1, 1)
+			love.graphics.rectangle("fill", -450, 480, 25, -health * 10)
+			graphics.setColor(0, 0, 0)
+			love.graphics.setLineWidth(10)
+
+			love.graphics.setColor(1, 1, 1)
+			love.graphics.setFont(qfont)
+			--combo counter
+			if combo == 0 then
+				love.graphics.print("  ", 0, 0)
+			else 
+				love.graphics.print(" ".. combo, -85, -230, 0, 2, 2)
 			end
 
-
-			if settings.downscroll then
-				love.graphics.print("Score: " .. score, 300, -350)
-			else
-
-				graphics.setColor(1, 1, 1)
-				love.graphics.setFont(qfont)
-				
-				--combo counter
-				if combo == 0 then
-					love.graphics.print("  ", 0, 0)
-				else 
-				    love.graphics.print(" ".. combo, -85, -230, 0, 2, 2)
-				end
-
-				--the judgment counter
-				if sicks == 0 then
-					love.graphics.print("Sicks", 725, -200)
-				else 
-					love.graphics.print("       " .. sicks, 725, -200)
-				end
-
-				if goods == 0 then
-					love.graphics.print("Goods", 725, -125)
-				else
-					love.graphics.print("       " .. goods, 725, -125)
-				end
-
-				if bads == 0 then
-					love.graphics.print("Bads", 725, -50)
-				else
-					love.graphics.print("       " .. bads, 725, -50)
-				end
-
-				if shits == 0 then
-					love.graphics.print("Shits", 725, 25)
-				else
-					love.graphics.print("       " .. shits, 725, 25)
-				end
-				
-				if misses == 0 then
-					love.graphics.print("Misses", 725, 100)
-				else
-					love.graphics.print("       " .. misses, 725, 100)
-				end
-
-
-				--judgments :sin:
-				if combo == 69 then
-					love.graphics.print("Nice", -85, -250, 0, 0.5, 0.5)
-				elseif ratingQ == 4 then
-					love.graphics.print("Sick", -85, -250, 0, 0.5, 0.5)
-				elseif ratingQ == 3 then
-					love.graphics.print("Good", -85, -250, 0, 0.5, 0.5)
-				elseif ratingQ == 2 then
-					love.graphics.print("Bad", -85, -250, 0, 0.5, 0.5)
-				elseif ratingQ == 1 then
-					love.graphics.print("Shit", -85, -250, 0, 0.5, 0.5) -- haha shit, just like this code
-				elseif ratingQ == 5 then -- why the fuck did i use 5 here
-					love.graphics.print("Miss", -85, -250, 0, 0.5, 0.5) -- lmfao bad at the game
-				else
-					love.graphics.print(" ", 0, 0)
-				end
-
+			--the judgment counter
+			if sicks == 0 then
+				love.graphics.print("Sicks", 725, -200)
+			else 
+				love.graphics.print("       " .. sicks, 725, -200)
 			end
 
-			graphics.setColor(1, 1, 1, countdownFade[1])
-			countdown:draw()
+			if goods == 0 then
+				love.graphics.print("Goods", 725, -125)
+			else
+				love.graphics.print("       " .. goods, 725, -125)
+			end
+
+			if bads == 0 then
+				love.graphics.print("Bads", 725, -50)
+			else
+				love.graphics.print("       " .. bads, 725, -50)
+			end
+
+			if shits == 0 then
+				love.graphics.print("Shits", 725, 25)
+			else
+				love.graphics.print("       " .. shits, 725, 25)
+			end
+			
+			if misses == 0 then
+				love.graphics.print("Misses", 725, 100)
+			else
+				love.graphics.print("       " .. misses, 725, 100)
+			end
+
+			--judgments :sin:
+			if combo == 69 then
+				love.graphics.print("Nice", -85, -250, 0, 0.5, 0.5)
+			elseif ratingQ == 5 then 
+				love.graphics.print("Miss", -85, -250, 0, 0.5, 0.5) -- lmfao bad at the game
+			elseif ratingQ == 4 then
+				love.graphics.print("Sick", -85, -250, 0, 0.5, 0.5)
+			elseif ratingQ == 3 then
+				love.graphics.print("Good", -85, -250, 0, 0.5, 0.5)
+			elseif ratingQ == 2 then
+				love.graphics.print("Bad", -85, -250, 0, 0.5, 0.5)
+			elseif ratingQ == 1 then
+				love.graphics.print("Shit", -85, -250, 0, 0.5, 0.5) -- haha shit, just like this code
+			else
+				love.graphics.print(" ", 0, 0)
+			end
+
 			graphics.setColor(1, 1, 1)
 		love.graphics.pop()
 	end,

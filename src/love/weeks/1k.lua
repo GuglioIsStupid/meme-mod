@@ -25,8 +25,7 @@ return {
 	enter = function(self, from, songNum, songAppend)
 		oneK:enter()
 
-		song = songNum
-		difficulty = songAppend
+		song = 1
 
 		enemy = love.filesystem.load("sprites/girlfriend.lua")()
 
@@ -36,7 +35,7 @@ return {
 		enemy.x, enemy.y = -380, -110
 		boyfriend.x, boyfriend.y = 260, 100
 
-		enemyIcon:animate("daddy dearest", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -78,19 +77,19 @@ return {
 		oneK:initUI()
 
 		if song == 7 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/lmao" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/lmao.lua")())
 		elseif song == 6 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/amogus" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/amogus.lua")())
 		elseif song == 5 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/beast-burger" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/beast-burger.lua")())
 		elseif song == 4 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/end" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/end.lua")())
 		elseif song == 3 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/scott" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/scott.lua")())
 		elseif song == 2 then
-			oneK:generateNotes(love.filesystem.load("charts/week1/sonic" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/sonic.lua")())
 		else
-			oneK:generateNotes(love.filesystem.load("charts/week1/woo" .. difficulty .. ".lua")())
+			oneK:generateNotes(love.filesystem.load("charts/week1/woo.lua")())
 		end
 	end,
 
@@ -98,12 +97,12 @@ return {
 		oneK:update(dt)
 
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "daddy dearest" then
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
 				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
 			if enemyIcon:getAnimName() == "daddy dearest losing" then
-				enemyIcon:animate("daddy dearest", false)
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

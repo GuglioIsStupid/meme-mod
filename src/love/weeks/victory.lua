@@ -25,7 +25,7 @@ return {
 	enter = function(self, from, songNum, songAppend)
 		victory:enter()
 
-		song = songNum
+		song = 1
 		difficulty = songAppend
 
 		background = graphics.newImage(love.graphics.newImage(graphics.imagePath("victory/stageback")))
@@ -35,12 +35,11 @@ return {
 		fakeBoyfriend = love.filesystem.load("sprites/victory/death.lua")()
 
 		girlfriend.x, girlfriend.y = 30, -90
-		enemy.x, enemy.y = -290, 55
-		boyfriend.x, boyfriend.y = 290, 55
+		enemy.x, enemy.y = -250, -30
+		boyfriend.x, boyfriend.y = 320, 55
 		fakeBoyfriend.x, fakeBoyfriend.y = 290, 55
 
-		enemyIcon:animate("monster losing", false)
-		boyfriendIcon:animate("mommy mearest", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -84,14 +83,12 @@ return {
 		end
 
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "monster losing" then
-				enemyIcon:animate("boyfriend (pixel)", false)
-				boyfriendIcon:animate("tankman", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
-			if enemyIcon:getAnimName() == "boyfriend (pixel)" then
-				enemyIcon:animate("monster losing", false)
-				boyfriendIcon:animate("mommy mearest", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

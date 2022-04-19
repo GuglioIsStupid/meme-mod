@@ -35,7 +35,7 @@ return {
 
 		weekSmall:enter()
 
-		song = songNum
+		song = 1
 		difficulty = songAppend
 
 		cam.sizeX, cam.sizeY = 1, 1
@@ -58,6 +58,9 @@ return {
 		if song == 3 then
 			inst = love.audio.newSource("music/original/week6/thorns-inst.ogg", "stream")
 			voices = love.audio.newSource("music/original/week6/thorns-voices.ogg", "stream")
+			school = graphics.newImage(love.graphics.newImage(graphics.imagePath("small/schoolEvil")))
+			school.x = 8
+			school.y = 4
 		elseif song == 2 then
 			inst = love.audio.newSource("music/original/week6/roses-inst.ogg", "stream")
 			voices = love.audio.newSource("music/original/week6/roses-voices.ogg", "stream")
@@ -80,6 +83,17 @@ return {
 		The weekSmall does NOT like hold notes. So if you can remake the charts without hold notes that would be great.
 
 		]]
+
+
+
+		--[[ NOTE GUGLIO
+
+		pepsi
+
+		]]
+
+
+		
 		if song == 3 then 
 			weekSmall:generateNotes(love.filesystem.load("charts/small/thorns.lua")())
 		elseif song == 2 then

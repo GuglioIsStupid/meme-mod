@@ -25,10 +25,10 @@ return {
 	enter = function(self, from, songNum, songAppend)
 		quaver:enter()
 
-		song = songNum
+		song = 1
 		difficulty = songAppend
 
-		background = graphics.newImage(love.graphics.newImage(graphics.imagePath("quaver/bg")))
+		background = graphics.newImage(love.graphics.newImage(graphics.imagePath("quaver/oneBg")))
 		underlay = graphics.newImage(love.graphics.newImage(graphics.imagePath("quaver/underlay")))
 
 		enemy = love.filesystem.load("sprites/monster.lua")()
@@ -51,8 +51,19 @@ return {
 	load = function(self)
 		quaver:load()
 
-		inst = love.audio.newSource("music/quaver/Inst.ogg", "stream")
-		voices = love.audio.newSource("music/quaver/Voices.ogg", "stream")
+		if song == 3 then
+			inst = love.audio.newSource("music/quaver/two/Inst.ogg", "stream")
+			voices = love.audio.newSource("music/quaver/two/Voices.ogg", "stream")
+			background = graphics.newImage(love.graphics.newImage(graphics.imagePath("quaver/twoBg")))
+		elseif song == 2 then
+			inst = love.audio.newSource("music/quaver/three/Inst.ogg", "stream")
+			voices = love.audio.newSource("music/quaver/three/Voices.ogg", "stream")
+			background = graphics.newImage(love.graphics.newImage(graphics.imagePath("quaver/threeBg")))
+		else
+			inst = love.audio.newSource("music/quaver/one/Inst.ogg", "stream")
+			voices = love.audio.newSource("music/quaver/one/Voices.ogg", "stream")
+		end
+
 		
 		self:initUI()
 
@@ -62,23 +73,37 @@ return {
 	initUI = function(self)
 		quaver:initUI()
 
-		quaver:generateNotes(love.filesystem.load("charts/quaver/bopeebo.lua")())
+
+		if song == 3 then
+			quaver:generateNotes(love.filesystem.load("charts/quaver/two.lua")())
+		elseif song == 2 then
+			quaver:generateNotes(love.filesystem.load("charts/quaver/three.lua")())
+		else
+			quaver:generateNotes(love.filesystem.load("charts/quaver/one.lua")())
+		end
+
 	end,
 
 	update = function(self, dt)
 		quaver:update(dt)
 
 		if not (countingDown or graphics.isFading()) and not (inst:isPlaying() and voices:isPlaying()) then
-			status.setLoading(true)
+			if storyMode and song < 3 then
+				song = song + 1
 
-			graphics.fadeOut(
-				0.5,
-				function()
-					Gamestate.switch(menu)
+				self:load()
+			else
+				status.setLoading(true)
 
-					status.setLoading(false)
-				end
-			)
+				graphics.fadeOut(
+					0.5,
+					function()
+						Gamestate.switch(menu)
+
+						status.setLoading(false)
+					end
+				)
+			end
 		end
 
 		quaver:updateUI(dt)

@@ -67,7 +67,7 @@ return {
 
 		enemy.sizeX = -1
 
-		enemyIcon:animate("skid and pump losing", false)
+		enemyIcon:animate("daddy dearest losing", false)
 		skittles:animate("anim", true) --fuck you
 		smokeLeft:animate("anim", true)
 		smokeRight:animate("anim", true)
@@ -151,13 +151,19 @@ return {
 			- Guglio
 		]]
 
+		--[[
+			what did i do :(
+
+			- ch
+		]]
+
 		if health >= 80 then
-			if enemyIcon:getAnimName() == "skid and pump losing" then
-				enemyIcon:animate("pico", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		else
-			if enemyIcon:getAnimName() == "pico" then
-				enemyIcon:animate("skid and pump losing", false)
+			if enemyIcon:getAnimName() == "daddy dearest losing" then
+				enemyIcon:animate("daddy dearest losing", false)
 			end
 		end
 

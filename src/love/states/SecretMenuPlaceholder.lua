@@ -30,6 +30,9 @@ local songDifficulty = 2
 local titleBG = graphics.newImage(love.graphics.newImage(graphics.imagePath("menu/secret-title-bg")))
 local logo = graphics.newImage(love.graphics.newImage(graphics.imagePath("menu/secret-logo")))
 
+
+logo.sizeX, logo.sizeY = 0.6, 0.6
+
 local girlfriendTitle = love.filesystem.load("sprites/week7/tankmanCaptain.lua")()
 girlfriendTitle:animate("idle", true)
 
@@ -47,60 +50,61 @@ local weekMeta7 = {
 			"Guns",
 			"Stress"
 		}
-	},
-	{
-		"Fucked up in the crib",
-		{
-			"Fucked up in the crib"
-		}
-	},
-	{
-		"Below Average 1K",
-		{
-			"WOOOOOOOOOOOOOOOOOOOO",
-			"Sonic 1 Intro",
-			"Scott The Woz",
-			"Endless but it ends immediately",
-			"Mr Beast Burger",
-			"amogus",
-			"lmao"
-		}
-	},
-	{
-		"Victory",
-		{
-			"Victory"
-		}
-	},
-	{
-		"Lost Silver",
-		{
-			"Monochrome"
-		}
-	},
-	{
-		"Friday Night Fuckshit 2",
-		{
-			"Fucked Up In The Crib......again (we are running out of ideas)"
-		}
-	},
-	{
-		"Garcello",
-		{
-			"Nerves",
-			"Headache",
-			"Release",
-			"Fading"
-		}
-	},
-	{
-		"Quaver",
-		{
-			"1",
-			"2",
-			"3"
-		}
 	}
+--	{
+--		"Fucked up in the crib",
+--		{
+--			"Fucked up in the crib"
+--		}
+--	},
+--	{
+--		"Below Average 1K",
+--		{
+--			"WOOOOOOOOOOOOOOOOOOOO",
+--			"Sonic 1 Intro",
+--			"Scott The Woz",
+--			"Endless but it ends immediately",
+--			"Mr Beast Burger",
+--			"amogus",
+--			"lmao"
+--		}
+--	},
+--	{
+--		"Victory",
+--		{
+--			"Victory"
+--		}
+--	},
+--	{
+--		"Lost Silver",
+--		{
+--			"Monochrome"
+--		}
+--	},
+--	{
+--		"Friday Night Fuckshit 2",
+--		{
+--			"Fucked Up In The Crib......again (we are running out of ideas)"
+--		}
+--	},
+--	{
+--		"Garcello",
+--		{
+--			"Nerves",
+--			"Headache",
+--			"Release",
+--			"Fading"
+--		}
+--	},
+--	{
+--		"Quaver  [CREDITS TO PIANOLUIGI FOR CHARTING THESE SONGS]",
+--		{
+--		"Princess of Winter",
+--	
+--			"Flowering Night",
+--			"Csikos Post"
+--		}
+--	}
 }
 local difficultyStrs = {
 	"-easy",

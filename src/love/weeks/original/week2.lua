@@ -46,7 +46,7 @@ return {
 		enemy.x, enemy.y = -610, 140
 		boyfriend.x, boyfriend.y = 30, 240
 
-		enemyIcon:animate("skid and pump", false)
+		enemyIcon:animate("daddy dearest losing", false)
 
 		self:load()
 	end,
@@ -59,7 +59,7 @@ return {
 
 			enemy.x, enemy.y = -610, 120
 
-			enemyIcon:animate("monster", false)
+			enemyIcon:animate("daddy dearest losing", false)
 
 			inst = love.audio.newSource("music/original/week2/monster-inst.ogg", "stream")
 			voices = love.audio.newSource("music/original/week2/monster-voices.ogg", "stream")
@@ -112,22 +112,22 @@ return {
 
 		if song == 3 then
 			if health >= 80 then
-				if enemyIcon:getAnimName() == "monster" then
-					enemyIcon:animate("monster losing", false)
+				if enemyIcon:getAnimName() == "daddy dearest losing" then
+					enemyIcon:animate("daddy dearest losing", false)
 				end
 			else
-				if enemyIcon:getAnimName() == "monster losing" then
-					enemyIcon:animate("monster", false)
+				if enemyIcon:getAnimName() == "daddy dearest losing" then
+					enemyIcon:animate("daddy dearest losing", false)
 				end
 			end
 		else
 			if health >= 80 then
-				if enemyIcon:getAnimName() == "skid and pump" then
-					enemyIcon:animate("skid and pump losing", false)
+				if enemyIcon:getAnimName() == "daddy dearest losing" then
+					enemyIcon:animate("daddy dearest losing", false)
 				end
 			else
-				if enemyIcon:getAnimName() == "skid and pump losing" then
-					enemyIcon:animate("skid and pump", false)
+				if enemyIcon:getAnimName() == "daddy dearest losing" then
+					enemyIcon:animate("daddy dearest losing", false)
 				end
 			end
 		end
