@@ -20,7 +20,7 @@ return {
 		songNum = 0
 		completed.y = 380
 		completed.sizeX, completed.sizeY = 0.355, 0.355
-		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()  -- gugio dumb
+		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()  -- gugio dumb  
 		graphics.setFade(0)
 		graphics.fadeIn(0.5)
 	end,
@@ -66,3 +66,6 @@ return {
 		love.graphics.pop()
 	end
 }
+
+
+-- typing so github lets me commit this
