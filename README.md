@@ -47,7 +47,8 @@ If using a controller on a PC, a controller with an Xbox button layout is recomm
     * macOS - `~/Library/Application Support/funkin-rewritten/screenshots`
 	* Linux - `~/.local/share/love/funkin-rewritten/screenshots`
 	* Nintendo Switch - `./funkin-rewritten/screenshots`
-* 7 - Open debug menu
+* 8 - Open debug menu
+* DO NOT PRESS 7. WE HATE 7. 
 
 # Settings
 The settings file can be found in the following places on the following systems:
