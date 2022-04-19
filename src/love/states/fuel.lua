@@ -27,7 +27,7 @@ return {
 	update = function(self, dt)
 		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()
 		if not graphics.isFading() then
-			if (input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940) then
+			if ((input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940)) or input:pressed("confirm") then
 				Timer.tween(3.4, yellow, {x = yellow.x, y = -65}, "linear")
 			end
 		end
