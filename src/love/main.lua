@@ -25,6 +25,11 @@ function love.load()
 		systemOS = "windows" -- Loads fake windows crash
 	end
 
+
+
+	--super secret setting dont tell anyone 
+	disablePHIntro = true
+
 	--load sounds
 	selectSound = love.audio.newSource("sounds/menu/select.ogg", "static")
 
@@ -61,6 +66,7 @@ function love.load()
 	amogus = require "states.amogus"
 	amogusDead = require "states.amogusDead"
 	victoryVideo = require "states.victory"
+	fuel = require "states.fuel"
 	
 	--load easter egg weeks (THESE ARE SECRET GET THE FUCK OUT OF HERE)
 	quaverWeek = require "weeks.quaver"
@@ -68,6 +74,7 @@ function love.load()
 	oneK_Week = require "weeks.1k"
 	cribWeek = require "weeks.week3"
 	garcelloWeek = require "weeks.weekg"
+	fuckedUpInTheCrib = require "weeks.week3"
 
 	--load week states (because theres a lot lmfao)
 	weeks = require "states.weeks/week"
@@ -180,9 +187,13 @@ function love.load()
 		Gamestate.switch(clickStart)
 	else
 		if not fileExists then
-			Gamestate.switch(menu)
+			Gamestate.switch(gallery)
 		else
-			Gamestate.switch(clickStart)
+			if disablePHIntro then
+				Gamestate.switch(menu)
+			else
+				Gamestate.switch(clickStart)
+			end
 		end
 	end
 end
@@ -222,6 +233,7 @@ function love.keypressed(key)
         end
 
     else
+
         Gamestate.keypressed(key)
     end
 end

@@ -53,7 +53,7 @@ return {
 
 		sprites = {
 			icons = love.filesystem.load("sprites/original/icons.lua"),
-			numbers = love.filesystem.load("sprites/original/numbers.lua")
+			numbers = love.filesystem.load("sprites/numbers.lua")
 		}
 
 		song = songNum
@@ -63,6 +63,9 @@ return {
 
 		bgLimo = love.filesystem.load("sprites/original/week4/bg-limo.lua")()
 		limoDancer = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
+		limoDancerOne = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
+		limoDancerTwo = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
+		limoDancerThree = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
 		girlfriend = love.filesystem.load("sprites/original/week4/girlfriend.lua")()
 		limo = love.filesystem.load("sprites/original/week4/limo.lua")()
 		enemy = love.filesystem.load("sprites/original/week4/mommy-mearest.lua")()
@@ -72,13 +75,24 @@ return {
 
 		fakeBoyfriend.x, fakeBoyfriend.y = 350, -100
 		bgLimo.y = 250
-		limoDancer.y = -130
+
+
+
+		limoDancer.x, limoDancer.y = 475, -130  
+		limoDancerOne.x, limoDancerOne.y = 725, -130
+		limoDancerTwo.x, limoDancer.y = 400, -130
+		--limoDancerThree.x, limoDancerThree.y =
+		limoDancerThree.y = -130
+
+		---475, 725, 400
+
+
 		girlfriend.x, girlfriend.y = 30, -50
 		limo.y = 375
 		enemy.x, enemy.y = -380, -10
 		boyfriend.x, boyfriend.y = 340, -100
 
-		rating = love.filesystem.load("sprites/original/rating.lua")()
+		rating = love.filesystem.load("sprites/rating.lua")()
 
 		rating.sizeX, rating.sizeY = 0.75, 0.75
 		numbers = {}
@@ -102,7 +116,7 @@ return {
 		boyfriendIcon.sizeX, boyfriendIcon.sizeY = -1.5, 1.5
 
 		countdownFade = {}
-		countdown = love.filesystem.load("sprites/original/countdown.lua")()
+		countdown = love.filesystem.load("sprites/countdown.lua")()
 
 		enemyIcon:animate("mommy mearest", false)
 
@@ -152,12 +166,21 @@ return {
 
 		bgLimo:update(dt)
 		limoDancer:update(dt)
+		limoDancerOne:update(dt)
+		limoDancerTwo:update(dt)
+		limoDancerThree:update(dt)
 		limo:update(dt)
 
 		if musicThres ~= oldMusicThres and math.fmod(absMusicTime, 120000 / bpm) < 100 then
 			limoDancer:animate("anim", false)
+			limoDancerOne:animate("anim", false)
+			limoDancerTwo:animate("anim", false)
+			limoDancerThree:animate("anim", false)
 
 			limoDancer:setAnimSpeed(14.4 / (60 / bpm))
+			limoDancerOne:setAnimSpeed(14.4 / (60 / bpm))
+			limoDancerTwo:setAnimSpeed(14.4 / (60 / bpm))
+			limoDancerThree:setAnimSpeed(14.4 / (60 / bpm))
 		end
 
 		if health >= 80 then
@@ -203,11 +226,15 @@ return {
 				sunset:draw()
 
 				bgLimo:draw()
-				for i = -475, 725, 400 do
-					limoDancer.x = i
+			--	for i = -475, 725, 400 do
+			--		limoDancer.x = i
 
-					limoDancer:draw()
-				end
+			--		limoDancer:draw()
+			--	end
+			limoDancer:draw()
+			limoDancerOne:draw()
+			limoDancerTwo:draw()
+			limoDancerThree:draw()
 			love.graphics.pop()
 			love.graphics.push()
 				love.graphics.translate(cam.x, cam.y)

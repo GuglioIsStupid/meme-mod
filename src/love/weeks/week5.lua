@@ -201,6 +201,13 @@ return {
 	end,
 
 	update = function(self, dt)
+
+
+	--	if input:pressed("oneK") then
+	--		if song == 1 or song == 2 then
+	--			Gamestate.switch("fuel")
+	--		end
+	--	end
 		if not scaryIntro then
 			weeks:update(dt)
 

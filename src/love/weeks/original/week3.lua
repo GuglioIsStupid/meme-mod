@@ -104,7 +104,20 @@ return {
 			if winColor > 5 then
 				winColor = 1
 			end
+
+			if winColor == 3 then
+				textHappen = true
+			else
+				textHappen = false
+			end
 		end
+
+		if textHappen then
+			if input:pressed("oneK") then
+				Gamestate.switch(fuckedUpInTheCrib)
+			end
+		end
+		
 
 		if health >= 80 then
 			if enemyIcon:getAnimName() == "pico" then
@@ -171,6 +184,18 @@ return {
 
 				enemy:draw()
 				boyfriend:draw()
+				if textHappen then
+					love.graphics.printf(
+						"space bar like right now you dumbass you have to press space right now PRESS SPACE FUCKING ASSHOLE RIGHT NOW PRESS SPACE",
+						-70,
+						-140,
+						450,
+						"right",
+						nil,
+						1,
+						1
+					)
+				end
 			love.graphics.pop()
 			weeks:drawRating(0.9)
 		love.graphics.pop()

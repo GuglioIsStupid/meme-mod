@@ -195,7 +195,6 @@ return {
 					1,
 					1
 				)
-				love.graphics.print("AM7999#8935: BETA TESTER", -200, 0, nil, 0.8, 0.8)
 
 			love.graphics.pop()
 			love.graphics.push()

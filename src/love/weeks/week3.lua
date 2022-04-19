@@ -125,7 +125,7 @@ return {
 				graphics.fadeOut(
 					0.5,
 					function()
-						Gamestate.switch(secretMenu)
+						Gamestate.switch(menu)
 
 						status.setLoading(false)
 					end

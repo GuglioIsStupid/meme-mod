@@ -64,6 +64,8 @@ return {
 			numbers = love.filesystem.load("sprites/original/numbers.lua")
 		}
 
+		spaceBar = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/spaceBar")))
+
 		song = songNum
 		difficulty = songAppend
 
@@ -72,9 +74,13 @@ return {
 			escalator = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/escalator")))
 			christmasTree = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/christmas-tree")))
 			snow = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/snow")))
+			spaceBar = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week5/spaceBar")))
 
 			escalator.x = 125
 			christmasTree.x = 75
+			spaceBar.x = 320
+			spaceBar.y = 620
+			spaceBar.sizeX, spaceBar.sizeY = 100, 100
 			snow.y = 850
 			snow.sizeX, snow.sizeY = 2, 2
 
@@ -201,6 +207,35 @@ return {
 	end,
 
 	update = function(self, dt)
+
+
+
+		if song == 3 then
+			if input:pressed("gameLeft") then
+				christmasTree.x = christmasTree.x - 10
+			end
+	
+			if input:pressed("gameUp") then
+				christmasTree.y = christmasTree.y - 10
+			end
+	
+			if input:pressed("gameDown") then
+				christmasTree.y = christmasTree.y + 10
+			end
+	
+			if input:pressed("gameRight") then
+				christmasTree.x = christmasTree.x + 10
+			end
+		end
+
+		if not scaryIntro then		
+			if input:pressed("oneK") then
+				if song == 3 then
+					Gamestate.switch(fuel)
+				end
+			end
+		end
+
 		if not scaryIntro then
 			weeks:update(dt)
 
@@ -284,6 +319,9 @@ return {
 				if song ~= 3 then
 					topBop:draw()
 					escalator:draw()
+				end
+				if song == 3 then
+					spaceBar:draw()
 				end
 				christmasTree:draw()
 			love.graphics.pop()
