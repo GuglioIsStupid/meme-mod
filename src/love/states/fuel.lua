@@ -20,14 +20,14 @@ return {
 		songNum = 0
 		completed.y = 380
 		completed.sizeX, completed.sizeY = 0.355, 0.355
-		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()
+		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()  -- gugio dumb
 		graphics.setFade(0)
 		graphics.fadeIn(0.5)
 	end,
 	update = function(self, dt)
 		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()
 		if not graphics.isFading() then
-			if (input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940) then
+			if (input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940) or input:press("confirm") or input:pressed("oneK") then
 				Timer.tween(3.4, yellow, {x = yellow.x, y = -65}, "linear")
 			end
 		end
