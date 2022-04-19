@@ -99,6 +99,7 @@ else
 		g = {"key:g"}
 		z = {"key:z"}
 		five = {"key:5"}
+		gameClick = {"mouse:1"}
 		oneK_other_arrows = {}
 	else
 		gameLeft = {"key:a", "key:left", "axis:leftx-", "axis:rightx-", "button:dpleft", "button:x"}
@@ -115,6 +116,7 @@ else
 		g = {"key:g"}
 		z = {"key:z"}
 		five = {"key:5"}
+		gameClick = {"mouse:1"}
 		oneK_other_arrows = {}
 	end
 
@@ -143,6 +145,7 @@ else
 			g = g,
 			z = z,
 			five = five,
+			gameClick = gameClick,
 			gameBack = {"key:escape", "button:start"},
 		},
 		joystick = love.joystick.getJoysticks()[1]

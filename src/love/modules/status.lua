@@ -48,7 +48,10 @@ return {
 			"\ngraphics.getImageType(): " .. tostring(graphics.getImageType()) ..
 
 			"\n\nmusicTime: " .. tostring(math.floor(musicTime)) ..  -- Floored for readability
-			"\nhealth: " .. tostring(health)
+			"\nhealth: " .. tostring(health) ..
+
+			"\nMouseX: " .. tostring(love.mouse.getX()) ..
+			"\nMouseY: " .. tostring(love.mouse.getY())
 		else
 			debugStr = "FPS: " .. tostring(love.timer.getFPS())
 		end
