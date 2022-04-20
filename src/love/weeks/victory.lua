@@ -79,7 +79,7 @@ return {
 		victory:update(dt)
 
 		if song == 4 and musicThres ~= oldMusicThres and math.fmod(absMusicTime + 500, 480000 / bpm) < 100 then -- JUST SET IT TO A SONG AFTER THE LAST SONG AND THEN IT WONT DO ANYTHING
-			victory:safeAnimate(boyfriend, "hey", false, 3)
+			victory:safeAnimate(boyfriend, "hey", false, 3)                                                     -- KYS
 		end
 
 		if health >= 80 then
