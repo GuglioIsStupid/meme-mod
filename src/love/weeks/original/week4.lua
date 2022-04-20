@@ -161,11 +161,6 @@ return {
 			Timer.tween(4, girlfriend, {x = 10000, y = girlfriend.y}, "in-quad")
 		end
 		weeksFour:update(dt)
-
-
-		if input:pressed("j") then
-			Gamestate.switch(oneK_Week)
-		end
 		-- Hardcoded M.I.L.F camera scaling
 		if song == 3 and musicTime > 56000 and musicTime < 67000 and musicThres ~= oldMusicThres and math.fmod(absMusicTime, 60000 / bpm) < 100 then
 			if camScaleTimer then Timer.cancel(camScaleTimer) end
@@ -191,6 +186,10 @@ return {
 			if enemyIcon:getAnimName() == "daddy dearest losing" then
 				enemyIcon:animate("daddy dearest losing", false)
 			end
+		end
+
+		if input:pressed("b") then
+			Gamestate.switch(oneK_Week)
 		end
 
 		if not (countingDown or graphics.isFading()) and not (inst:isPlaying() and voices:isPlaying()) then
