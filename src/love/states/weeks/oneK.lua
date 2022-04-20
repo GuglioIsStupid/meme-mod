@@ -54,7 +54,7 @@ return {
 
 		images = {
 			icons = love.graphics.newImage(graphics.imagePath("icons")),
-			notes = love.graphics.newImage(graphics.imagePath("notes")),
+			notesok = love.graphics.newImage(graphics.imagePath("Circles")),
 			numbers = love.graphics.newImage(graphics.imagePath("numbers"))
 		}
 
@@ -122,22 +122,21 @@ return {
 		health = 50
 		score = 0
 
-		sprites.leftArrow = love.filesystem.load("sprites/left-arrow.lua")
-		sprites.downArrow = love.filesystem.load("sprites/down-arrow.lua")
-		sprites.upArrow = love.filesystem.load("sprites/up-arrow.lua")
-		sprites.rightArrow = love.filesystem.load("sprites/right-arrow.lua")
+		sprites.upArrow = love.filesystem.load("sprites/oneK.lua")
+		-- Guglio here and uhh...
+		-- This was made before multikey was added to FNFR
 
 		enemyArrows = {
-			sprites.leftArrow(),
-			sprites.downArrow(),
 			sprites.upArrow(),
-			sprites.rightArrow()
+			sprites.upArrow(),
+			sprites.upArrow(),
+			sprites.upArrow()
 		}
 		boyfriendArrows= {
-			sprites.leftArrow(),
-			sprites.downArrow(),
 			sprites.upArrow(),
-			sprites.rightArrow()
+			sprites.upArrow(),
+			sprites.upArrow(),
+			sprites.upArrow()
 		}
 
 		for i = 1, 4 do
@@ -187,15 +186,7 @@ return {
 					table.insert(events, {eventTime = chart[i].sectionNotes[1].noteTime, mustHitSection = mustHitSection, bpm = eventBpm, altAnim = altAnim})
 				end
 
-				if noteType == 0 or noteType == 4 then
-					sprite = sprites.leftArrow
-				elseif noteType == 1 or noteType == 5 then
-					sprite = sprites.downArrow
-				elseif noteType == 2 or noteType == 6 then
-					sprite = sprites.upArrow
-				elseif noteType == 3 or noteType == 7 then
-					sprite = sprites.rightArrow
-				end
+				sprite = sprites.upArrow
 
 				if settings.downscroll then
 					if mustHitSection then
