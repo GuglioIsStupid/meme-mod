@@ -1,0 +1,148 @@
+ok so to play meme mod you have to extract the love folder from the zip to idk somewhere on your pc
+
+after extracting it DO NOT open it it will spoil the mod
+
+unless you just want to spoil it for yourself idk
+
+then, make sure you have love2d installed on your pc
+
+https://love2d.org go there and install it if you dont
+
+then, oh fuck i just realized meme mod wont work on linux oh no // ignore. Just run love . in cmd or "love love/"
+
+well anyway, if your on linux just go to microsoft.com and switch to windows i guess idk // Use the OS you like :)
+
+umm
+
+yeah so then you gotta find the love2d shortcut
+
+after that, drag the love folder onto the love2d shortcut icon
+
+meme mod should open
+
+its very quiet for some reason neither me or guglio could figure out why so make sure your volume is kinda up
+
+not too loud but a bit louder than normal
+
+and after that enjoy meme mod (not really its not fun at all)
+
+
+
+
+
+DO NOT SCROLL DOWN UNTILL YOU HAVE COMPLETED MEME MOD. BELOW IS INSTRUCTIONS TO SEE ALL EASTER EGGS (except the literal hundreds hidden in the code where me or guglio left a little message, im not exagerating when i say hundreds)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to see quaver, die on tutorial
+
+to see defeat but bacwards, press space during week 1
+
+to see fucked up in the crib, press space when it tells you to in week 3
+
+to see below average 1k, press B in week 4
+
+to see a literal among us task and nothing else press space i think idk i forgor in winter horrorland
+
+to see really low resolution week press space in song one or two in week 6
+
+to see week 7 press 7 on the main menu
+
+to see the fucking dietz nuts ad go to credits in the secret week 7 menu
+
+to see the fnaf security breach gallery open the SUS folder in the love folder and follow the instructions in there
+
+to see the literal hundreds of little messages me or guglio left in the code just go read it, theres a few in main.lua that are pretty easy to see but there are literally messages hidden everywhere

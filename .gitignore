@@ -6,6 +6,7 @@
 
 # Build
 build/*
+src/game.zip
 
 # Dependencies
 resources/macos/love.app/*
@@ -34,3 +35,4 @@ tools/funkin-xna/*
 *.exe
 
 !texconv.exe
+
