@@ -8,9 +8,9 @@ then, make sure you have love2d installed on your pc
 
 https://love2d.org go there and install it if you dont
 
-then, oh fuck i just realized meme mod wont work on linux oh no 
+then, oh fuck i just realized meme mod wont work on linux oh no // ignore. Just run love . in cmd or "love love/"
 
-well anyway, if your on linux just go to microsoft.com and switch to windows i guess idk
+well anyway, if your on linux just go to microsoft.com and switch to windows i guess idk // Use the OS you like :)
 
 umm
 
