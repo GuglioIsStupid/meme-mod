@@ -4,7 +4,9 @@
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/HTV04/funkin-rewritten?style=flat-square)](https://github.com/HTV04/funkin-rewritten/releases/latest) [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/HTV04/funkin-rewritten?include_prereleases&style=flat-square)](https://github.com/HTV04/funkin-rewritten/releases) [![GitHub all releases](https://img.shields.io/github/downloads/HTV04/funkin-rewritten/total?style=flat-square)](https://github.com/HTV04/funkin-rewritten/releases) [![GitHub issues](https://img.shields.io/github/issues/HTV04/funkin-rewritten?style=flat-square)](https://github.com/HTV04/funkin-rewritten/issues) [![GitHub](https://img.shields.io/github/license/HTV04/funkin-rewritten?style=flat-square)](https://github.com/HTV04/funkin-rewritten/blob/main/LICENSE) [![Discord](https://img.shields.io/discord/852658576577003550?style=flat-square)](https://discord.gg/tQGzN2Wu48)
 
 Friday Night Funkin' Rewritten is a rewrite of [Friday Night Funkin'](https://ninja-muffin24.itch.io/funkin) built on [LÖVE](https://love2d.org/) for Windows, macOS, Linux, and Web platforms, as well as previously unsupported platforms, like the Nintendo Switch!
+Do not run this on the switch. If you run meme mod on your switch it will overheat and explode.
 
+VVV This is all fgake this doesa noit gahppen
 Friday Night Funkin' Rewritten features:
 * A rewritten engine focused on performance and playability
 * Much less memory usage than the original game
@@ -12,10 +14,11 @@ Friday Night Funkin' Rewritten features:
 * Other cool features, like downscroll
 * And more to come!
 
-Join my Discord server for Funkin' Rewritten updates and discussion: https://discord.gg/tQGzN2Wu48
+Join my Discord server for Funkin' Rewritten updates and discussion: https://discord.gg/tQGzN2Wu48 <-- You should join
 
 # Controls
 If using a controller on a PC, a controller with an Xbox button layout is recommended. Controller buttons will be remappable in a future update.
+Why wouwadl you iuse contreopller on pc tho??
 
 ## Menus
 ### Keyboard
@@ -47,7 +50,8 @@ If using a controller on a PC, a controller with an Xbox button layout is recomm
     * macOS - `~/Library/Application Support/funkin-rewritten/screenshots`
 	* Linux - `~/.local/share/love/funkin-rewritten/screenshots`
 	* Nintendo Switch - `./funkin-rewritten/screenshots`
-* 7 - Open debug menu
+* 8 - Open debug menu
+* DO NOT PRESS 7. WE HATE 7. (especially on the main menu)
 
 # Settings
 The settings file can be found in the following places on the following systems:
@@ -57,19 +61,13 @@ The settings file can be found in the following places on the following systems:
 * Nintendo Switch - `./funkin-rewritten/settings.ini`
 
 # Progress
-**Menus** - 50% Complete
-* A proper menu has not been implemented yet. For now, a placeholder menu has been implemented.
+Meme mod has the best menu anyone will ever see (we are too good)
 
-**Game Engine** - 90% Complete
-* Engine is in close parity with the original game's Week 6 update.
-* No pause menu yet.
+**Game Engine** - 100% Complete
+Meme mod has a better engine that base FNFR (we are too good)
 
-**Weeks** - ~7/8 Complete
-* Tutorial + Weeks 1-6 are implemented.
-* Week 3's train is not added yet.
-* Week 4's passing car is not added yet.
-* Week 6 is a WIP.
-* Week 7 is not implemented yet.
+**Weeks** - 8/8 Complete
+meme mods weeks are 100% complete (we are too good)
 
 # License
 *Friday Night Funkin' Rewritten* is licensed under the terms of the GNU General Public License v3, with the exception of most of the images, music, and sounds, which are proprietary. While FNF Rewritten's code is FOSS, use its assets at your own risk.
