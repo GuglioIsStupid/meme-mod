@@ -52,7 +52,7 @@ return {
 		}
 
 		sprites = {
-			icons = love.filesystem.load("sprites/original/icons.lua"),
+			icons = love.filesystem.load("sprites/icons.lua"),
 			numbers = love.filesystem.load("sprites/numbers.lua")
 		}
 
@@ -60,37 +60,33 @@ return {
 		difficulty = songAppend
 
 		sunset = graphics.newImage(love.graphics.newImage(graphics.imagePath("original/week4/sunset")))
+		jKey = graphics.newImage(love.graphics.newImage(graphics.imagePath("week4/jKey")))
 
-		bgLimo = love.filesystem.load("sprites/original/week4/bg-limo.lua")()
-		limoDancer = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
-		limoDancerOne = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
-		limoDancerTwo = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
-		limoDancerThree = love.filesystem.load("sprites/original/week4/limo-dancer.lua")()
-		girlfriend = love.filesystem.load("sprites/original/week4/girlfriend.lua")()
-		limo = love.filesystem.load("sprites/original/week4/limo.lua")()
-		enemy = love.filesystem.load("sprites/original/week4/mommy-mearest.lua")()
-		boyfriend = love.filesystem.load("sprites/original/week4/boyfriend.lua")()
-		rating = love.filesystem.load("sprites/original/rating.lua")()
-		fakeBoyfriend = love.filesystem.load("sprites/original/boyfriend.lua")() -- Used for game over
+		bgLimo = love.filesystem.load("sprites/week4/bg-limo.lua")()
+		limoDancer = love.filesystem.load("sprites/week4/limo-dancer.lua")()
+		girlfriend = love.filesystem.load("sprites/week4/girlfriend.lua")()
+		limo = love.filesystem.load("sprites/week4/limo.lua")()
+		enemy = love.filesystem.load("sprites/week4/mommy-mearest.lua")()
+		enemyTwo = love.filesystem.load("sprites/week4/mommy-mearest.lua")()
+		boyfriend = love.filesystem.load("sprites/week4/boyfriend.lua")()
+		boyfriendTwo = love.filesystem.load("sprites/week4/boyfriend.lua")()
+		rating = love.filesystem.load("sprites/rating.lua")()
+		fakeBoyfriend = love.filesystem.load("sprites/boyfriend.lua")() -- Used for game over
 
 		fakeBoyfriend.x, fakeBoyfriend.y = 350, -100
 		bgLimo.y = 250
-
-
-
-		limoDancer.x, limoDancer.y = 475, -130  
-		limoDancerOne.x, limoDancerOne.y = 725, -130
-		limoDancerTwo.x, limoDancer.y = 400, -130
-		--limoDancerThree.x, limoDancerThree.y =
-		limoDancerThree.y = -130
-
-		---475, 725, 400
-
-
+		jKey.y = 240
+		jKey.x = 220
+		jKey.sizeX, jKey.sizeY = 0.5, 0.5
+		bgLimo.x = 0
+		limoDancer.y = -130
 		girlfriend.x, girlfriend.y = 30, -50
 		limo.y = 375
+		limo.x = 0
 		enemy.x, enemy.y = -380, -10
+		enemyTwo.x, enemyTwo.y = -380, -10
 		boyfriend.x, boyfriend.y = 340, -100
+		boyfriendTwo.x, boyfriendTwo.y = 340, -100
 
 		rating = love.filesystem.load("sprites/rating.lua")()
 
@@ -124,39 +120,52 @@ return {
 	end,
 
 	load = function(self)
-		weeks:load()
+		weeksFour:load()
 
 		if song == 3 then
-			inst = love.audio.newSource("music/original/week4/milf-inst.ogg", "stream")
-			voices = love.audio.newSource("music/original/week4/milf-voices.ogg", "stream")
+			inst = love.audio.newSource("music/week4/milf-inst.ogg", "stream")
+			voices = love.audio.newSource("music/week4/milf-voices.ogg", "stream")
 		elseif song == 2 then
-			inst = love.audio.newSource("music/original/week4/high-inst.ogg", "stream")
-			voices = love.audio.newSource("music/original/week4/high-voices.ogg", "stream")
+			inst = love.audio.newSource("music/week4/high-inst.ogg", "stream")
+			voices = love.audio.newSource("music/week4/high-voices.ogg", "stream")
 		else
-			inst = love.audio.newSource("music/original/week4/satin-panties-inst.ogg", "stream")
-			voices = love.audio.newSource("music/original/week4/satin-panties-voices.ogg", "stream")
+			inst = love.audio.newSource("music/week4/satin-panties-inst.ogg", "stream")
+			voices = love.audio.newSource("music/week4/satin-panties-voices.ogg", "stream")
 		end
 
 		self:initUI()
 
-		weeks:setupCountdown()
+		weeksFour:setupCountdown()
 	end,
 
 	initUI = function(self)
-		weeks:initUI()
+		weeksFour:initUI()
 
 		if song == 3 then
-			weeks:generateNotes(love.filesystem.load("charts/original/week4/milf" .. difficulty .. ".lua")())
+			weeksFour:generateNotes(love.filesystem.load("charts/week4/milf" .. difficulty .. ".lua")())
 		elseif song == 2 then
-			weeks:generateNotes(love.filesystem.load("charts/original/week4/high" .. difficulty .. ".lua")())
+			weeksFour:generateNotes(love.filesystem.load("charts/week4/high" .. difficulty .. ".lua")())
 		else
-			weeks:generateNotes(love.filesystem.load("charts/original/week4/satin-panties" .. difficulty .. ".lua")())
+			weeksFour:generateNotes(love.filesystem.load("charts/week4/satin-panties" .. difficulty .. ".lua")())
 		end
 	end,
 
 	update = function(self, dt)
-		weeks:update(dt)
 
+
+
+		if musicTime > 60000 and limo.x == 0 then
+			Timer.tween(4, limo, {x = 10000, y = bgLimo.y}, "in-quad")
+			Timer.tween(4, boyfriendTwo, {x = 10000, y = boyfriendTwo.y}, "in-quad")
+			Timer.tween(4, enemyTwo, {x = 10000, y = enemyTwo.y}, "in-quad")
+			Timer.tween(4, girlfriend, {x = 10000, y = girlfriend.y}, "in-quad")
+		end
+		weeksFour:update(dt)
+
+
+		if input:pressed("j") then
+			Gamestate.switch(oneK_Week)
+		end
 		-- Hardcoded M.I.L.F camera scaling
 		if song == 3 and musicTime > 56000 and musicTime < 67000 and musicThres ~= oldMusicThres and math.fmod(absMusicTime, 60000 / bpm) < 100 then
 			if camScaleTimer then Timer.cancel(camScaleTimer) end
@@ -166,21 +175,12 @@ return {
 
 		bgLimo:update(dt)
 		limoDancer:update(dt)
-		limoDancerOne:update(dt)
-		limoDancerTwo:update(dt)
-		limoDancerThree:update(dt)
 		limo:update(dt)
 
 		if musicThres ~= oldMusicThres and math.fmod(absMusicTime, 120000 / bpm) < 100 then
 			limoDancer:animate("anim", false)
-			limoDancerOne:animate("anim", false)
-			limoDancerTwo:animate("anim", false)
-			limoDancerThree:animate("anim", false)
 
 			limoDancer:setAnimSpeed(14.4 / (60 / bpm))
-			limoDancerOne:setAnimSpeed(14.4 / (60 / bpm))
-			limoDancerTwo:setAnimSpeed(14.4 / (60 / bpm))
-			limoDancerThree:setAnimSpeed(14.4 / (60 / bpm))
 		end
 
 		if health >= 80 then
@@ -212,7 +212,7 @@ return {
 			end
 		end
 
-		weeks:updateUI(dt)
+		weeksFour:updateUI(dt)
 	end,
 
 	draw = function(self)
@@ -226,28 +226,27 @@ return {
 				sunset:draw()
 
 				bgLimo:draw()
-			--	for i = -475, 725, 400 do
-			--		limoDancer.x = i
+				for i = -475, 725, 400 do
+					limoDancer.x = i
 
-			--		limoDancer:draw()
-			--	end
-			limoDancer:draw()
-			limoDancerOne:draw()
-			limoDancerTwo:draw()
-			limoDancerThree:draw()
+					limoDancer:draw()
+				end
 			love.graphics.pop()
 			love.graphics.push()
 				love.graphics.translate(cam.x, cam.y)
 
+				jKey:draw()
 				girlfriend:draw()
 				limo:draw()
-				enemy:draw()
-				boyfriend:draw()
+				enemyTwo:draw()
+				boyfriendTwo:draw()
+			--	enemy:draw()
+				--boyfriend:draw()
 			love.graphics.pop()
-			weeks:drawRating(1)
+			weeksFour:drawRating(1)
 		love.graphics.pop()
 
-		weeks:drawUI()
+		weeksFour:drawUI()
 	end,
 
 	leave = function()
@@ -257,6 +256,6 @@ return {
 		limoDancer = nil
 		limo = nil
 
-		weeks:leave()
+		weeksFour:leave()
 	end
 }

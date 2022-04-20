@@ -28,7 +28,7 @@ function love.load()
 
 
 	--super secret setting dont tell anyone 
-	disablePHIntro = true
+	disablePHIntro = false
 
 	--load sounds
 	selectSound = love.audio.newSource("sounds/menu/select.ogg", "static")
@@ -92,6 +92,7 @@ function love.load()
 	weeks2 = require "states.weeks/week2"
 	weeks1 = require "states.weeks/week1"
 	weekSmall = require "states.weeks/myDickSizeIfItWasAScreenResolution" -- (this is referring to Guglio's dick size, not CH's)
+	weeksFour = require "states.weeks/weeksFour"
 
 	fileExists = love.filesystem.getInfo("SUS/OH MY GOD ITS THE IMPOSTER FROM AMONG US.png")
 	if not fileExists then
@@ -119,6 +120,7 @@ function love.load()
 	gameOverTutorial = require "substates.game-over-tutorial"
 	gameOverGarcello = require "substates.game-over-garcello"
 	fakeGameOver = require "substates.fake-game-over"
+	gameOverQ = require "substates.game-over-quaver"
 
 	-- Load week data
 	weekData = {

@@ -27,12 +27,12 @@ return {
 	update = function(self, dt)
 		mouseX, mouseY = love.mouse.getX(), love.mouse.getY()
 		if not graphics.isFading() then
-			if (input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940) or input:press("confirm") or input:pressed("oneK") then
+			if (input:pressed("gameClick")) and (mouseX >= 860 and mouseX <= 1085) and (mouseY >= 520 and mouseY <= 940) or input:pressed("confirm") or input:pressed("oneK") then
 				Timer.tween(3.4, yellow, {x = yellow.x, y = -65}, "linear")
 			end
 		end
 		if not graphics.isFading() then
-			if input:pressed("back") then
+			if input:pressed("back") or completed.y == -380 then
 				Gamestate.switch(menu)
 			end
 		end
@@ -40,6 +40,8 @@ return {
 			if completed.y == 380 then
 				Timer.tween(0.8, completed, {x = completed.x, y = -380}, "out-in-quint")
 			end	
+
+
 			if not taskFinished then
 				task:play()
 				taskFinished = true

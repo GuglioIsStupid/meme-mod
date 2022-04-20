@@ -68,6 +68,9 @@ return {
 		girlfriend = love.filesystem.load("sprites/girlfriend.lua")()
 		boyfriend = love.filesystem.load("sprites/boyfriend.lua")()
 
+
+		fading = 0
+
 		rating = love.filesystem.load("sprites/rating.lua")()
 
 		rating.sizeX, rating.sizeY = 0.75, 0.75
@@ -569,6 +572,9 @@ return {
 
 	update = function(self, dt)
 		oldMusicThres = musicThres
+
+		delta = love.timer.getDelta()
+
 		if countingDown or love.system.getOS() == "Web" then -- Source:tell() can't be trusted on love.js!
 			musicTime = musicTime + 1000 * dt
 		else
@@ -831,7 +837,7 @@ return {
 		elseif health > 20 and boyfriendIcon:getAnimName() == "boyfriend losing" then
 			boyfriendIcon:animate("boyfriend", false)
 		elseif health <= 0 then -- Game over
-			Gamestate.push(gameOver)
+			Gamestate.push(gameOverQ)
 		elseif health <= 20 and boyfriendIcon:getAnimName() == "boyfriend" then
 			boyfriendIcon:animate("boyfriend losing", false)
 		end
@@ -996,7 +1002,7 @@ return {
 			end
 
 			graphics.setColor(1, 1, 1, countdownFade[1])
-			countdown:draw()
+			--countdown:draw()
 			graphics.setColor(1, 1, 1)
 		love.graphics.pop()
 	end,
